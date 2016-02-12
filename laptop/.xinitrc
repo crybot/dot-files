@@ -2,7 +2,7 @@
 xrdb -merge ~/.Xresources
 
 while true; do
-  ~/script.sh
+  ~/.toolbar.sh
 done &
 
 # Make dwm restartable
