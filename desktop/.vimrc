@@ -67,14 +67,16 @@ set shiftround
 set laststatus=2
 "set shiftwidth=2
 "set softtabstop=2
+
+colorscheme solarized
+syntax on
+filetype plugin on
 filetype indent on
+set incsearch " show search matches as you type
 set smartindent
 set t_Co=16
-syntax on
 set number
 set background=dark 
-colorscheme solarized
-filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 set cursorline
 set colorcolumn=80
