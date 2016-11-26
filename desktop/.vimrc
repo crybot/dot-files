@@ -6,12 +6,18 @@ call vundle#begin()
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/syntastic'
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'jumski/vim-colors-solarized' "altercation column sign fix
 Plugin 'jplaut/vim-arduino-ino'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-rails'
 Plugin 'itchyny/vim-haskell-indent'
 Plugin 'dag/vim2hs'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+Plugin 'neomake/neomake'
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'artur-shaik/vim-javacomplete2'
+Plugin 'xuhdev/vim-latex-live-preview'
 "Plugin 'vim-scripts/Superior-Haskell-Interaction-Mode-SHIM'
 Plugin 'bitc/vim-hdevtools'
 "Plugin 'flazz/vim-colorschemes'
@@ -21,12 +27,26 @@ filetype plugin indent on    " required
 
 "GLOBAL REMAPPING
 "Syntastic remapping
-map <F6> :SyntasticToggleMode <bar> w <Cr>
-map <C-n> :lnext<Cr>
-map <C-p> :lprevious<Cr>
+nnoremap <C-p> :nohlsearch <Cr>
+nnoremap <F6> :SyntasticToggleMode <bar> w <Cr>
+nnoremap <C-l> gt 
+nnoremap <C-h> gT 
 autocmd FileType haskell nmap <C-c><C-f> :GhciFile<Cr> 
-"Haskell SHIM remapping
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
+
+let g:neomake_error_sign = {'text': '✖', 'texthl': 'FoldColumn'}
+let g:neomake_warning_sign = {'text': '➤', 'texthl': 'FoldColumn'}
+let g:neomake_message_sign = {'text': 'M', 'texthl': 'FoldColumn'}
+let g:neomake_info_sign = {'text': 'ℹ', 'texthl': 'FoldColumn'}
+let g:deoplete#enable_at_startup = 1
+
+" Neomake asynchronous linting
+" Trigger neomake whenever text is changed in normal mode, leaving insert
+" mode or not pressing any key for 'updatetime' ms while in insert mode
+autocmd TextChanged,InsertLeave,CursorHoldI *.java,*.hs,*.c update | Neomake
+
+set updatetime=1500 "wait 1.5 second of inactivity before checking for errors
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -52,7 +72,7 @@ let g:vim_arduino_map_keys = 1
 
 "Octave syntax 
 augroup filetypedetect 
-  au! BufRead,BufNewFile *.m,*.oct set filetype=octave 
+    au! BufRead,BufNewFile *.m,*.oct set filetype=octave 
 augroup END
 
 "Haskell
