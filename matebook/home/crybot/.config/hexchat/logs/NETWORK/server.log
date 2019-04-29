@@ -1,0 +1,620 @@
+**** BEGIN LOGGING AT Sat Apr 27 19:16:32 2019
+
+apr 27 19:16:32 Python interface loaded
+apr 27 19:16:32 Sysinfo plugin loaded
+apr 27 19:16:32 Checksum plugin loaded
+apr 27 19:16:32 FiSHLiM plugin loaded
+apr 27 19:16:32 Perl interface loaded
+**** BEGIN LOGGING AT Sat Apr 27 19:33:18 2019
+
+apr 27 19:33:18 Python interface loaded
+apr 27 19:33:18 Sysinfo plugin loaded
+apr 27 19:33:18 Checksum plugin loaded
+apr 27 19:33:18 FiSHLiM plugin loaded
+apr 27 19:33:18 Perl interface loaded
+apr 27 19:33:18 *	Looking up chat.freenode.net
+apr 27 19:33:18 *	Unknown host. Maybe you misspelled it?
+apr 27 19:33:28 Cycling to next server in freenode...
+apr 27 19:33:28 *	Disconnected ()
+**** ENDING LOGGING AT Sat Apr 27 19:33:28 2019
+
+**** BEGIN LOGGING AT Sun Apr 28 14:46:48 2019
+
+apr 28 14:46:48 Python interface loaded
+apr 28 14:46:48 Sysinfo plugin loaded
+apr 28 14:46:48 Checksum plugin loaded
+apr 28 14:46:48 FiSHLiM plugin loaded
+apr 28 14:46:48 Perl interface loaded
+apr 28 14:54:33 Perl interface unloaded
+apr 28 14:54:33 FiSHLiM plugin unloaded
+apr 28 14:54:33 Checksum plugin unloaded
+apr 28 14:54:33 Sysinfo plugin unloaded
+**** BEGIN LOGGING AT Mon Apr 29 16:14:39 2019
+
+apr 29 16:14:39 Python interface loaded
+apr 29 16:14:39 Sysinfo plugin loaded
+apr 29 16:14:39 Checksum plugin loaded
+apr 29 16:14:39 FiSHLiM plugin loaded
+apr 29 16:14:39 Perl interface loaded
+apr 29 16:20:15 *	Looking up chat.freenode.net
+apr 29 16:20:15 *	Connecting to chat.freenode.net (107.182.226.199:6697)
+apr 29 16:20:16 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 16:20:16 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 16:20:16 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 16:20:16 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 16:20:16 *	* Subject: /CN=livingstone.freenode.net
+apr 29 16:20:16 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 16:20:16 *	* Certification info:
+apr 29 16:20:16 *	  Subject:
+apr 29 16:20:16 *	    CN=livingstone.freenode.net
+apr 29 16:20:16 *	  Issuer:
+apr 29 16:20:16 *	    C=US
+apr 29 16:20:16 *	    O=Let's Encrypt
+apr 29 16:20:16 *	    CN=Let's Encrypt Authority X3
+apr 29 16:20:16 *	  Public key algorithm: rsaEncryption (4096 bits)
+apr 29 16:20:16 *	  Sign algorithm sha256WithRSAEncryption
+apr 29 16:20:16 *	  Valid since Apr 29 05:07:42 2019 GM to Jul 28 05:07:42 2019 GM
+apr 29 16:20:16 *	* Cipher info:
+apr 29 16:20:16 *	  Version: TLSv1.2, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+apr 29 16:20:16 *	Connected. Now logging in.
+apr 29 16:20:16 *	*** Looking up your hostname...
+apr 29 16:20:16 *	*** Checking Ident
+apr 29 16:20:17 *	*** Couldn't look up your hostname
+apr 29 16:20:21 *	*** No Ident response
+apr 29 16:20:21 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+apr 29 16:20:21 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix 
+apr 29 16:20:21 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix 
+**** ENDING LOGGING AT Mon Apr 29 16:20:22 2019
+
+**** BEGIN LOGGING AT Mon Apr 29 16:34:39 2019
+
+apr 29 16:34:39 Python interface loaded
+apr 29 16:34:39 Sysinfo plugin loaded
+apr 29 16:34:39 Checksum plugin loaded
+apr 29 16:34:39 FiSHLiM plugin loaded
+apr 29 16:34:39 Perl interface loaded
+apr 29 16:34:39 *	Looking up chat.freenode.net
+apr 29 16:34:39 *	Connecting to chat.freenode.net (185.30.166.37:6697)
+apr 29 16:34:39 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 16:34:39 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 16:34:39 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 16:34:39 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 16:34:39 *	* Subject: /CN=orwell.freenode.net
+apr 29 16:34:39 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 16:34:40 *	* Certification info:
+apr 29 16:34:40 *	  Subject:
+apr 29 16:34:40 *	    CN=orwell.freenode.net
+apr 29 16:34:40 *	  Issuer:
+apr 29 16:34:40 *	    C=US
+apr 29 16:34:40 *	    O=Let's Encrypt
+apr 29 16:34:40 *	    CN=Let's Encrypt Authority X3
+apr 29 16:34:40 *	  Public key algorithm: rsaEncryption (4096 bits)
+apr 29 16:34:40 *	  Sign algorithm sha256WithRSAEncryption
+apr 29 16:34:40 *	  Valid since Apr 22 05:05:47 2019 GM to Jul 21 05:05:47 2019 GM
+apr 29 16:34:40 *	* Cipher info:
+apr 29 16:34:40 *	  Version: TLSv1.2, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+apr 29 16:34:40 *	Connected. Now logging in.
+apr 29 16:34:40 *	*** Looking up your hostname...
+apr 29 16:34:40 *	*** Checking Ident
+apr 29 16:34:40 *	*** Couldn't look up your hostname
+apr 29 16:34:47 *	*** No Ident response
+apr 29 16:34:47 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+apr 29 16:34:47 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix 
+apr 29 16:34:48 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix 
+**** ENDING LOGGING AT Mon Apr 29 16:34:48 2019
+
+**** BEGIN LOGGING AT Mon Apr 29 16:37:26 2019
+
+apr 29 16:37:26 Python interface loaded
+apr 29 16:37:26 Sysinfo plugin loaded
+apr 29 16:37:26 Checksum plugin loaded
+apr 29 16:37:26 FiSHLiM plugin loaded
+apr 29 16:37:26 Perl interface loaded
+apr 29 16:37:26 *	Looking up chat.freenode.net
+apr 29 16:37:26 *	Connecting to chat.freenode.net (107.182.226.199) port 6697...
+apr 29 16:37:27 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 16:37:27 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 16:37:27 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 16:37:27 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 16:37:27 *	* Subject: /CN=livingstone.freenode.net
+apr 29 16:37:27 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 16:37:27 *	* Certification info:
+apr 29 16:37:27 *	  Subject:
+apr 29 16:37:27 *	    CN=livingstone.freenode.net
+apr 29 16:37:27 *	  Issuer:
+apr 29 16:37:27 *	    C=US
+apr 29 16:37:27 *	    O=Let's Encrypt
+apr 29 16:37:27 *	    CN=Let's Encrypt Authority X3
+apr 29 16:37:27 *	  Public key algorithm: rsaEncryption (4096 bits)
+apr 29 16:37:27 *	  Sign algorithm sha256WithRSAEncryption
+apr 29 16:37:27 *	  Valid since Apr 29 05:07:42 2019 GM to Jul 28 05:07:42 2019 GM
+apr 29 16:37:27 *	* Cipher info:
+apr 29 16:37:27 *	  Version: TLSv1.2, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+apr 29 16:37:27 *	Connected. Now logging in...
+apr 29 16:37:27 *	*** Looking up your hostname...
+apr 29 16:37:27 *	*** Checking Ident
+apr 29 16:37:27 *	*** Couldn't look up your hostname
+apr 29 16:37:33 *	*** No Ident response
+apr 29 16:37:33 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+apr 29 16:37:33 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix 
+apr 29 16:37:33 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix 
+**** ENDING LOGGING AT Mon Apr 29 16:37:33 2019
+
+**** BEGIN LOGGING AT Mon Apr 29 16:52:58 2019
+
+apr 29 16:52:58 Python interface loaded
+apr 29 16:52:58 Sysinfo plugin loaded
+apr 29 16:52:58 Checksum plugin loaded
+apr 29 16:52:58 FiSHLiM plugin loaded
+apr 29 16:52:58 Perl interface loaded
+apr 29 16:52:58 *	Looking up chat.freenode.net
+apr 29 16:52:59 *	Connecting to chat.freenode.net (38.229.70.22) port 6697...
+apr 29 16:52:59 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 16:52:59 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 16:52:59 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 16:52:59 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 16:52:59 *	* Subject: /CN=card.freenode.net
+apr 29 16:52:59 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 16:53:00 Perl interface unloaded
+apr 29 16:53:00 FiSHLiM plugin unloaded
+apr 29 16:53:00 Checksum plugin unloaded
+apr 29 16:53:00 Sysinfo plugin unloaded
+**** BEGIN LOGGING AT Mon Apr 29 16:53:59 2019
+
+apr 29 16:53:59 Python interface loaded
+apr 29 16:53:59 Sysinfo plugin loaded
+apr 29 16:53:59 Checksum plugin loaded
+apr 29 16:53:59 FiSHLiM plugin loaded
+apr 29 16:53:59 Perl interface loaded
+apr 29 16:53:59 *	Looking up chat.freenode.net
+apr 29 16:53:59 *	Connecting to chat.freenode.net (204.225.96.251) port 6697...
+apr 29 16:54:00 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 16:54:00 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 16:54:00 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 16:54:00 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 16:54:00 *	* Subject: /CN=tolkien.freenode.net
+apr 29 16:54:00 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 16:54:00 *	* Certification info:
+apr 29 16:54:00 *	  Subject:
+apr 29 16:54:00 *	    CN=tolkien.freenode.net
+apr 29 16:54:00 *	  Issuer:
+apr 29 16:54:00 *	    C=US
+apr 29 16:54:00 *	    O=Let's Encrypt
+apr 29 16:54:00 *	    CN=Let's Encrypt Authority X3
+apr 29 16:54:00 *	  Public key algorithm: rsaEncryption (4096 bits)
+apr 29 16:54:00 *	  Sign algorithm sha256WithRSAEncryption
+apr 29 16:54:00 *	  Valid since Apr 29 05:01:45 2019 GM to Jul 28 05:01:45 2019 GM
+apr 29 16:54:00 *	* Cipher info:
+apr 29 16:54:00 *	  Version: TLSv1.2, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+apr 29 16:54:00 *	Connected. Now logging in...
+apr 29 16:54:00 *	*** Looking up your hostname...
+apr 29 16:54:00 *	*** Checking Ident
+apr 29 16:54:00 *	*** Couldn't look up your hostname
+apr 29 16:54:02 Perl interface unloaded
+apr 29 16:54:02 FiSHLiM plugin unloaded
+apr 29 16:54:02 Checksum plugin unloaded
+apr 29 16:54:02 Sysinfo plugin unloaded
+**** BEGIN LOGGING AT Mon Apr 29 16:56:50 2019
+
+apr 29 16:56:50 Python interface loaded
+apr 29 16:56:50 Sysinfo plugin loaded
+apr 29 16:56:50 Checksum plugin loaded
+apr 29 16:56:50 FiSHLiM plugin loaded
+apr 29 16:56:50 Perl interface loaded
+apr 29 16:56:50 *	Looking up chat.freenode.net
+apr 29 16:56:50 *	Connecting to chat.freenode.net (204.225.96.251) port 6697...
+apr 29 16:56:51 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 16:56:51 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 16:56:51 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 16:56:51 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 16:56:51 *	* Subject: /CN=tolkien.freenode.net
+apr 29 16:56:51 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 16:56:52 *	* Certification info:
+apr 29 16:56:52 *	  Subject:
+apr 29 16:56:52 *	    CN=tolkien.freenode.net
+apr 29 16:56:52 *	  Issuer:
+apr 29 16:56:52 *	    C=US
+apr 29 16:56:52 *	    O=Let's Encrypt
+apr 29 16:56:52 *	    CN=Let's Encrypt Authority X3
+apr 29 16:56:52 *	  Public key algorithm: rsaEncryption (4096 bits)
+apr 29 16:56:52 *	  Sign algorithm sha256WithRSAEncryption
+apr 29 16:56:52 *	  Valid since Apr 29 05:01:45 2019 GM to Jul 28 05:01:45 2019 GM
+apr 29 16:56:52 *	* Cipher info:
+apr 29 16:56:52 *	  Version: TLSv1.2, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+apr 29 16:56:52 *	Connected. Now logging in...
+apr 29 16:56:52 *	*** Looking up your hostname...
+apr 29 16:56:52 *	*** Checking Ident
+apr 29 16:56:52 *	*** Couldn't look up your hostname
+apr 29 16:56:53 Perl interface unloaded
+apr 29 16:56:53 FiSHLiM plugin unloaded
+apr 29 16:56:53 Checksum plugin unloaded
+apr 29 16:56:53 Sysinfo plugin unloaded
+**** BEGIN LOGGING AT Mon Apr 29 17:19:32 2019
+
+apr 29 17:19:32 Python interface loaded
+apr 29 17:19:32 Sysinfo plugin loaded
+apr 29 17:19:32 Checksum plugin loaded
+apr 29 17:19:32 FiSHLiM plugin loaded
+apr 29 17:19:32 Perl interface loaded
+apr 29 17:19:32 *	Looking up chat.freenode.net
+apr 29 17:19:33 *	Connecting to chat.freenode.net (195.154.200.232) port 6697...
+apr 29 17:19:33 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 17:19:33 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 17:19:33 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 17:19:33 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 17:19:33 *	* Subject: /CN=barjavel.freenode.net
+apr 29 17:19:33 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 17:19:33 *	* Certification info:
+apr 29 17:19:33 *	  Subject:
+apr 29 17:19:33 *	    CN=barjavel.freenode.net
+apr 29 17:19:33 *	  Issuer:
+apr 29 17:19:33 *	    C=US
+apr 29 17:19:33 *	    O=Let's Encrypt
+apr 29 17:19:33 *	    CN=Let's Encrypt Authority X3
+apr 29 17:19:33 *	  Public key algorithm: rsaEncryption (4096 bits)
+apr 29 17:19:33 *	  Sign algorithm sha256WithRSAEncryption
+apr 29 17:19:33 *	  Valid since Apr 22 05:01:50 2019 GM to Jul 21 05:01:50 2019 GM
+apr 29 17:19:33 *	* Cipher info:
+apr 29 17:19:33 *	  Version: TLSv1.2, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+apr 29 17:19:33 *	Connected. Now logging in...
+apr 29 17:19:33 *	*** Looking up your hostname...
+apr 29 17:19:33 *	*** Checking Ident
+apr 29 17:19:33 *	*** Couldn't look up your hostname
+apr 29 17:19:35 Perl interface unloaded
+apr 29 17:19:35 FiSHLiM plugin unloaded
+apr 29 17:19:35 Checksum plugin unloaded
+apr 29 17:19:35 Sysinfo plugin unloaded
+**** BEGIN LOGGING AT Mon Apr 29 17:31:09 2019
+
+apr 29 17:31:09 Python interface loaded
+apr 29 17:31:09 Sysinfo plugin loaded
+apr 29 17:31:09 Checksum plugin loaded
+apr 29 17:31:09 FiSHLiM plugin loaded
+apr 29 17:31:09 Perl interface loaded
+apr 29 17:31:09 *	Looking up chat.freenode.net
+apr 29 17:31:09 *	Connecting to chat.freenode.net (195.154.200.232) port 6697...
+apr 29 17:31:10 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 17:31:10 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 17:31:10 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 17:31:10 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 17:31:10 *	* Subject: /CN=barjavel.freenode.net
+apr 29 17:31:10 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 17:31:10 *	* Certification info:
+apr 29 17:31:10 *	  Subject:
+apr 29 17:31:10 *	    CN=barjavel.freenode.net
+apr 29 17:31:10 *	  Issuer:
+apr 29 17:31:10 *	    C=US
+apr 29 17:31:10 *	    O=Let's Encrypt
+apr 29 17:31:10 *	    CN=Let's Encrypt Authority X3
+apr 29 17:31:10 *	  Public key algorithm: rsaEncryption (4096 bits)
+apr 29 17:31:10 *	  Sign algorithm sha256WithRSAEncryption
+apr 29 17:31:10 *	  Valid since Apr 22 05:01:50 2019 GM to Jul 21 05:01:50 2019 GM
+apr 29 17:31:10 *	* Cipher info:
+apr 29 17:31:10 *	  Version: TLSv1.2, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+apr 29 17:31:10 *	Connected. Now logging in...
+apr 29 17:31:10 *	*** Looking up your hostname...
+apr 29 17:31:10 *	*** Checking Ident
+apr 29 17:31:10 *	*** Couldn't look up your hostname
+apr 29 17:31:13 Perl interface unloaded
+apr 29 17:31:13 FiSHLiM plugin unloaded
+apr 29 17:31:13 Checksum plugin unloaded
+apr 29 17:31:13 Sysinfo plugin unloaded
+**** BEGIN LOGGING AT Mon Apr 29 17:48:33 2019
+
+apr 29 17:48:33 Python interface loaded
+apr 29 17:48:33 Sysinfo plugin loaded
+apr 29 17:48:33 Checksum plugin loaded
+apr 29 17:48:33 FiSHLiM plugin loaded
+apr 29 17:48:33 Perl interface loaded
+apr 29 17:48:33 *	Looking up chat.freenode.net
+apr 29 17:48:33 *	Connecting to chat.freenode.net (185.30.166.37) port 6697...
+apr 29 17:48:34 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 17:48:34 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 17:48:34 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 17:48:34 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 17:48:34 *	* Subject: /CN=orwell.freenode.net
+apr 29 17:48:34 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 17:48:34 Perl interface unloaded
+apr 29 17:48:34 FiSHLiM plugin unloaded
+apr 29 17:48:34 Checksum plugin unloaded
+apr 29 17:48:34 Sysinfo plugin unloaded
+**** BEGIN LOGGING AT Mon Apr 29 17:48:50 2019
+
+apr 29 17:48:50 Python interface loaded
+apr 29 17:48:50 Sysinfo plugin loaded
+apr 29 17:48:50 Checksum plugin loaded
+apr 29 17:48:50 FiSHLiM plugin loaded
+apr 29 17:48:50 Perl interface loaded
+apr 29 17:48:50 *	Looking up chat.freenode.net
+apr 29 17:48:50 *	Connecting to chat.freenode.net (162.213.39.42) port 6697...
+apr 29 17:48:51 Perl interface unloaded
+apr 29 17:48:51 FiSHLiM plugin unloaded
+apr 29 17:48:51 Checksum plugin unloaded
+apr 29 17:48:51 Sysinfo plugin unloaded
+**** BEGIN LOGGING AT Mon Apr 29 17:55:38 2019
+
+apr 29 17:55:38 Python interface loaded
+apr 29 17:55:38 Sysinfo plugin loaded
+apr 29 17:55:38 Checksum plugin loaded
+apr 29 17:55:38 FiSHLiM plugin loaded
+apr 29 17:55:38 Perl interface loaded
+apr 29 17:55:38 *	Looking up chat.freenode.net
+apr 29 17:55:38 *	Connecting to chat.freenode.net (38.229.70.22) port 6697...
+apr 29 17:55:39 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 17:55:39 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 17:55:39 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 17:55:39 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 17:55:39 *	* Subject: /CN=card.freenode.net
+apr 29 17:55:39 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 17:55:39 Perl interface unloaded
+apr 29 17:55:39 FiSHLiM plugin unloaded
+apr 29 17:55:39 Checksum plugin unloaded
+apr 29 17:55:39 Sysinfo plugin unloaded
+**** BEGIN LOGGING AT Mon Apr 29 18:07:22 2019
+
+apr 29 18:07:22 Python interface loaded
+apr 29 18:07:22 Sysinfo plugin loaded
+apr 29 18:07:22 Checksum plugin loaded
+apr 29 18:07:22 FiSHLiM plugin loaded
+apr 29 18:07:22 Perl interface loaded
+apr 29 18:07:22 *	Looking up chat.freenode.net
+apr 29 18:07:22 *	Connecting to chat.freenode.net (162.213.39.42) port 6697...
+apr 29 18:07:23 Perl interface unloaded
+apr 29 18:07:23 FiSHLiM plugin unloaded
+apr 29 18:07:23 Checksum plugin unloaded
+apr 29 18:07:23 Sysinfo plugin unloaded
+**** BEGIN LOGGING AT Mon Apr 29 18:09:29 2019
+
+apr 29 18:09:29 Python interface loaded
+apr 29 18:09:29 Sysinfo plugin loaded
+apr 29 18:09:29 Checksum plugin loaded
+apr 29 18:09:29 FiSHLiM plugin loaded
+apr 29 18:09:29 Perl interface loaded
+apr 29 18:09:29 *	Looking up chat.freenode.net
+apr 29 18:09:29 *	Connecting to chat.freenode.net (192.186.157.43) port 6697...
+apr 29 18:09:30 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 18:09:30 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 18:09:30 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 18:09:30 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 18:09:30 *	* Subject: /CN=tepper.freenode.net
+apr 29 18:09:30 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 18:09:30 *	* Certification info:
+apr 29 18:09:30 *	  Subject:
+apr 29 18:09:30 *	    CN=tepper.freenode.net
+apr 29 18:09:30 *	  Issuer:
+apr 29 18:09:30 *	    C=US
+apr 29 18:09:30 *	    O=Let's Encrypt
+apr 29 18:09:30 *	    CN=Let's Encrypt Authority X3
+apr 29 18:09:30 *	  Public key algorithm: rsaEncryption (4096 bits)
+apr 29 18:09:30 *	  Sign algorithm sha256WithRSAEncryption
+apr 29 18:09:30 *	  Valid since Mar 25 05:03:58 2019 GM to Jun 23 05:03:58 2019 GM
+apr 29 18:09:30 *	* Cipher info:
+apr 29 18:09:30 *	  Version: TLSv1.2, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+apr 29 18:09:30 *	Connected. Now logging in...
+apr 29 18:09:30 *	*** Looking up your hostname...
+apr 29 18:09:30 *	*** Checking Ident
+apr 29 18:09:30 *	*** Couldn't look up your hostname
+apr 29 18:09:35 Perl interface unloaded
+apr 29 18:09:35 FiSHLiM plugin unloaded
+apr 29 18:09:35 Checksum plugin unloaded
+apr 29 18:09:35 Sysinfo plugin unloaded
+**** BEGIN LOGGING AT Mon Apr 29 18:12:36 2019
+
+apr 29 18:12:36 Python interface loaded
+apr 29 18:12:36 Sysinfo plugin loaded
+apr 29 18:12:36 Checksum plugin loaded
+apr 29 18:12:36 FiSHLiM plugin loaded
+apr 29 18:12:36 Perl interface loaded
+apr 29 18:12:36 *	Looking up chat.freenode.net
+apr 29 18:12:36 *	Connecting to chat.freenode.net (192.186.157.43) port 6697...
+apr 29 18:12:37 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 18:12:37 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 18:12:37 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 18:12:37 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 18:12:37 *	* Subject: /CN=tepper.freenode.net
+apr 29 18:12:37 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 18:12:37 *	* Certification info:
+apr 29 18:12:37 *	  Subject:
+apr 29 18:12:37 *	    CN=tepper.freenode.net
+apr 29 18:12:37 *	  Issuer:
+apr 29 18:12:37 *	    C=US
+apr 29 18:12:37 *	    O=Let's Encrypt
+apr 29 18:12:37 *	    CN=Let's Encrypt Authority X3
+apr 29 18:12:37 *	  Public key algorithm: rsaEncryption (4096 bits)
+apr 29 18:12:37 *	  Sign algorithm sha256WithRSAEncryption
+apr 29 18:12:37 *	  Valid since Mar 25 05:03:58 2019 GM to Jun 23 05:03:58 2019 GM
+apr 29 18:12:37 *	* Cipher info:
+apr 29 18:12:37 *	  Version: TLSv1.2, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+apr 29 18:12:37 *	Connected. Now logging in...
+apr 29 18:12:37 *	*** Looking up your hostname...
+apr 29 18:12:37 *	*** Checking Ident
+apr 29 18:12:37 *	*** Couldn't look up your hostname
+apr 29 18:12:43 *	*** No Ident response
+apr 29 18:12:43 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+apr 29 18:12:43 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix 
+apr 29 18:12:43 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix 
+**** ENDING LOGGING AT Mon Apr 29 18:12:43 2019
+
+**** BEGIN LOGGING AT Mon Apr 29 18:22:57 2019
+
+apr 29 18:22:57 Python interface loaded
+apr 29 18:22:57 Sysinfo plugin loaded
+apr 29 18:22:57 Checksum plugin loaded
+apr 29 18:22:57 FiSHLiM plugin loaded
+apr 29 18:22:57 Perl interface loaded
+apr 29 18:22:57 * Looking up chat.freenode.net
+apr 29 18:22:57 * Connecting to chat.freenode.net (195.154.200.232) port 6697...
+apr 29 18:22:57 * * Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 18:22:57 * * Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 18:22:57 * * Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 18:22:57 * * Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 18:22:57 * * Subject: /CN=barjavel.freenode.net
+apr 29 18:22:57 * * Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 18:22:58 * * Certification info:
+apr 29 18:22:58 *   Subject:
+apr 29 18:22:58 *     CN=barjavel.freenode.net
+apr 29 18:22:58 *   Issuer:
+apr 29 18:22:58 *     C=US
+apr 29 18:22:58 *     O=Let's Encrypt
+apr 29 18:22:58 *     CN=Let's Encrypt Authority X3
+apr 29 18:22:58 *   Public key algorithm: rsaEncryption (4096 bits)
+apr 29 18:22:58 *   Sign algorithm sha256WithRSAEncryption
+apr 29 18:22:58 *   Valid since Apr 22 05:01:50 2019 GM to Jul 21 05:01:50 2019 GM
+apr 29 18:22:58 * * Cipher info:
+apr 29 18:22:58 *   Version: TLSv1.2, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+apr 29 18:22:58 * Connected. Now logging in...
+apr 29 18:22:58 * *** Looking up your hostname...
+apr 29 18:22:58 * *** Checking Ident
+apr 29 18:22:58 * *** Couldn't look up your hostname
+apr 29 18:23:03 * *** No Ident response
+apr 29 18:23:03 * Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+apr 29 18:23:03 * Capabilities requested: account-notify extended-join identify-msg multi-prefix 
+apr 29 18:23:03 * Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix 
+**** ENDING LOGGING AT Mon Apr 29 18:23:03 2019
+
+**** BEGIN LOGGING AT Mon Apr 29 18:52:07 2019
+
+apr 29 18:52:07 Python interface loaded
+apr 29 18:52:07 Sysinfo plugin loaded
+apr 29 18:52:07 Checksum plugin loaded
+apr 29 18:52:07 FiSHLiM plugin loaded
+apr 29 18:52:07 Perl interface loaded
+apr 29 18:52:07 * Looking up chat.freenode.net
+apr 29 18:52:07 * Connecting to chat.freenode.net (38.229.70.22) port 6697...
+apr 29 18:52:08 * * Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 18:52:08 * * Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 18:52:08 * * Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 18:52:08 * * Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 18:52:08 * * Subject: /CN=card.freenode.net
+apr 29 18:52:08 * * Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 18:52:08 * * Certification info:
+apr 29 18:52:08 *   Subject:
+apr 29 18:52:08 *     CN=card.freenode.net
+apr 29 18:52:08 *   Issuer:
+apr 29 18:52:08 *     C=US
+apr 29 18:52:08 *     O=Let's Encrypt
+apr 29 18:52:08 *     CN=Let's Encrypt Authority X3
+apr 29 18:52:08 *   Public key algorithm: rsaEncryption (4096 bits)
+apr 29 18:52:08 *   Sign algorithm sha256WithRSAEncryption
+apr 29 18:52:08 *   Valid since Apr  1 05:03:08 2019 GM to Jun 30 05:03:08 2019 GM
+apr 29 18:52:08 * * Cipher info:
+apr 29 18:52:08 *   Version: TLSv1.2, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+apr 29 18:52:08 * Connected. Now logging in...
+apr 29 18:52:08 * *** Looking up your hostname...
+apr 29 18:52:08 * *** Checking Ident
+apr 29 18:52:08 * *** Couldn't look up your hostname
+apr 29 18:52:17 * *** No Ident response
+apr 29 18:52:17 * Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+apr 29 18:52:17 * Capabilities requested: account-notify extended-join identify-msg multi-prefix 
+apr 29 18:52:18 * Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix 
+**** ENDING LOGGING AT Mon Apr 29 18:52:18 2019
+
+**** BEGIN LOGGING AT Mon Apr 29 18:53:01 2019
+
+apr 29 18:53:01 Python interface loaded
+apr 29 18:53:01 Sysinfo plugin loaded
+apr 29 18:53:01 Checksum plugin loaded
+apr 29 18:53:01 FiSHLiM plugin loaded
+apr 29 18:53:01 Perl interface loaded
+apr 29 18:53:01 * Looking up chat.freenode.net
+apr 29 18:53:01 * Connecting to chat.freenode.net (195.154.200.232) port 6697...
+apr 29 18:53:02 * * Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 18:53:02 * * Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 18:53:02 * * Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 18:53:02 * * Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 18:53:02 * * Subject: /CN=barjavel.freenode.net
+apr 29 18:53:02 * * Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 18:53:02 * * Certification info:
+apr 29 18:53:02 *   Subject:
+apr 29 18:53:02 *     CN=barjavel.freenode.net
+apr 29 18:53:02 *   Issuer:
+apr 29 18:53:02 *     C=US
+apr 29 18:53:02 *     O=Let's Encrypt
+apr 29 18:53:02 *     CN=Let's Encrypt Authority X3
+apr 29 18:53:02 *   Public key algorithm: rsaEncryption (4096 bits)
+apr 29 18:53:02 *   Sign algorithm sha256WithRSAEncryption
+apr 29 18:53:02 *   Valid since Apr 22 05:01:50 2019 GM to Jul 21 05:01:50 2019 GM
+apr 29 18:53:02 * * Cipher info:
+apr 29 18:53:02 *   Version: TLSv1.2, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+apr 29 18:53:02 * Connected. Now logging in...
+apr 29 18:53:02 * *** Looking up your hostname...
+apr 29 18:53:02 * *** Checking Ident
+apr 29 18:53:02 * *** Couldn't look up your hostname
+apr 29 18:53:08 * *** No Ident response
+apr 29 18:53:08 * Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+apr 29 18:53:08 * Capabilities requested: account-notify extended-join identify-msg multi-prefix 
+apr 29 18:53:08 * Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix 
+**** ENDING LOGGING AT Mon Apr 29 18:53:08 2019
+
+**** BEGIN LOGGING AT Mon Apr 29 18:55:16 2019
+
+apr 29 18:55:16 Python interface loaded
+apr 29 18:55:16 Sysinfo plugin loaded
+apr 29 18:55:16 Checksum plugin loaded
+apr 29 18:55:16 FiSHLiM plugin loaded
+apr 29 18:55:16 Perl interface loaded
+apr 29 18:55:16 * Looking up chat.freenode.net
+apr 29 18:55:16 * Connecting to chat.freenode.net (185.30.166.38) port 6697...
+apr 29 18:55:17 * * Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 18:55:17 * * Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 18:55:17 * * Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 18:55:17 * * Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 18:55:17 * * Subject: /CN=verne.freenode.net
+apr 29 18:55:17 * * Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 18:55:17 * * Certification info:
+apr 29 18:55:17 *   Subject:
+apr 29 18:55:17 *     CN=verne.freenode.net
+apr 29 18:55:17 *   Issuer:
+apr 29 18:55:17 *     C=US
+apr 29 18:55:17 *     O=Let's Encrypt
+apr 29 18:55:17 *     CN=Let's Encrypt Authority X3
+apr 29 18:55:17 *   Public key algorithm: rsaEncryption (4096 bits)
+apr 29 18:55:17 *   Sign algorithm sha256WithRSAEncryption
+apr 29 18:55:17 *   Valid since Apr 22 05:07:14 2019 GM to Jul 21 05:07:14 2019 GM
+apr 29 18:55:17 * * Cipher info:
+apr 29 18:55:17 *   Version: TLSv1.2, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+apr 29 18:55:17 * Connected. Now logging in...
+apr 29 18:55:17 * *** Looking up your hostname...
+apr 29 18:55:17 * *** Checking Ident
+apr 29 18:55:17 * *** Couldn't look up your hostname
+apr 29 18:55:25 * *** No Ident response
+apr 29 18:55:25 * Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+apr 29 18:55:25 * Capabilities requested: account-notify extended-join identify-msg multi-prefix 
+apr 29 18:55:25 * Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix 
+**** ENDING LOGGING AT Mon Apr 29 18:55:25 2019
+
+**** BEGIN LOGGING AT Mon Apr 29 19:50:39 2019
+
+apr 29 19:50:39 Python interface loaded
+apr 29 19:50:39 Sysinfo plugin loaded
+apr 29 19:50:39 Checksum plugin loaded
+apr 29 19:50:39 FiSHLiM plugin loaded
+apr 29 19:50:39 Perl interface loaded
+apr 29 19:50:39 * Looking up chat.freenode.net
+apr 29 19:50:39 * Connecting to chat.freenode.net (185.30.166.37) port 6697...
+apr 29 19:50:40 * * Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 19:50:40 * * Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 19:50:40 * * Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 19:50:40 * * Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+apr 29 19:50:40 * * Subject: /CN=orwell.freenode.net
+apr 29 19:50:40 * * Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+apr 29 19:50:40 * * Certification info:
+apr 29 19:50:40 *   Subject:
+apr 29 19:50:40 *     CN=orwell.freenode.net
+apr 29 19:50:40 *   Issuer:
+apr 29 19:50:40 *     C=US
+apr 29 19:50:40 *     O=Let's Encrypt
+apr 29 19:50:40 *     CN=Let's Encrypt Authority X3
+apr 29 19:50:40 *   Public key algorithm: rsaEncryption (4096 bits)
+apr 29 19:50:40 *   Sign algorithm sha256WithRSAEncryption
+apr 29 19:50:40 *   Valid since Apr 22 05:05:47 2019 GM to Jul 21 05:05:47 2019 GM
+apr 29 19:50:40 * * Cipher info:
+apr 29 19:50:40 *   Version: TLSv1.2, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+apr 29 19:50:40 * Connected. Now logging in...
+apr 29 19:50:40 * *** Looking up your hostname...
+apr 29 19:50:40 * *** Checking Ident
+apr 29 19:50:40 * *** Found your hostname
+apr 29 19:50:44 Perl interface unloaded
+apr 29 19:50:44 FiSHLiM plugin unloaded
+apr 29 19:50:44 Checksum plugin unloaded
+apr 29 19:50:44 Sysinfo plugin unloaded

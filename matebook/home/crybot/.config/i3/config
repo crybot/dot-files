@@ -9,14 +9,21 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+# Set display dpi
+exec --no-startup-id xrandr --dpi 259
+
+# Start compton for window transparency. -CG disables all shadow effects
+exec --no-startup-id compton -CGb --config ~/.config/compton/compton.conf
+
 # Set Background Wallpaper
 exec --no-startup-id feh --bg-scale ~/Pictures/disco-dingo-art.png &
+
+# Launch network-manager applet
+exec --no-startup-id nm-applet &
 
 # Load Xresources config
 exec --no-startup-id xrdb -merge ~/.Xresources
 
-# Start compton for window transparency
-exec --no-startup-id compton --config ~/.config/compton/compton.conf &
 
 
 set $mod Mod4
@@ -27,7 +34,7 @@ font pango:monospace 9
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
+# font pango:DejaVu Sans Mono 9
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -45,19 +52,19 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -time 0 -steps 1 -inc 5 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -time 0 -steps 1 -dec 5 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -time 0 -steps 1 -inc 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -time 0 -steps 1 -dec 5 # decrease screen brightness
 
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec --no-startup-id urxvt
 
 # kill focused window
 bindsym $mod+Shift+c kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec i3-dmenu-desktop
-bindsym $mod+p exec dmenu_run
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+p exec --no-startup-id dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.

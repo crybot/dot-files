@@ -1,0 +1,200 @@
+T 1556385414 19*	Now talking on 22#bugbyte-ita
+T 1556385435 20<crybot>30	hola
+T 1556386533 19*	Now talking on 22#bugbyte-ita
+T 1556386608 18<26dualerium18>	> 404 - Not Found
+T 1556386610 18<26dualerium18>	lol
+T 1556387298 20<crybot>30	wut?
+T 1556387707 18<26dualerium18>	sto provando gitotile + cgit + lighttpd
+T 1556387713 18<26dualerium18>	ma non funge
+T 1556387827 18<26dualerium18>	sul raspberry pi
+T 1556387837 18<26dualerium18>	fin'ora ho messo poco
+T 1556387848 18<26dualerium18>	resilio sync :>
+T 1556389797 FiSHLiM plugin unloaded
+T 1556547627 19*	Now talking on 22#bugbyte-ita
+T 1556548278 20<crybot>30	wewe
+T 1556548469 FiSHLiM plugin unloaded
+T 1556548494 19*	Now talking on 22#bugbyte-ita
+T 1556548659 19*	19Now talking on #bugbyte-ita
+T 1556554369 19*	19Now talking on #bugbyte-ita
+T 1556554454 31<crybot>30	oioi
+T 1556554467 31<crybot>30	Franciman, si fanno pazzzie
+T 1556554473 31<crybot>30	ho installato un tema per gtk
+T 1556554474 21<Franciman>21	oioi crybot 
+T 1556554481 27<171822Franciman27>	cosa installasti?
+T 1556554495 31<crybot>30	solarc
+T 1556554522 27<171822Franciman27>	cucciolo
+T 1556554569 31<crybot>30	te lo vorrei fai vedere, e` troppo bello sto pc
+T 1556554572 31<crybot>30	sono proprio contento lol
+T 1556554576 27<171822Franciman27>	lol
+T 1556554579 27<171822Franciman27>	vedo
+T 1556554584 31<crybot>30	mi faceva schifo lasciarlo plain
+T 1556554590 27<171822Franciman27>	a me solarized fa cagare
+T 1556554604 27<171822Franciman27>	però mi piace lo stile
+T 1556554619 31<crybot>30	Franciman, non ti fa cagare
+T 1556554623 31<crybot>30	ti e` solo venuto a noia
+T 1556554629 27<171822Franciman27>	ewatto
+T 1556554632 31<crybot>30	quando lo installasti ti piaceva
+T 1556554645 27<171822Franciman27>	sì è bello
+T 1556554658 27<171822Franciman27>	ma il mio cervello lo vede come inflazionato
+T 1556554701 27<171822Franciman27>	cmq sta venendo proprio bello il tuo pc
+T 1556554711 31<crybot>30	Franciman, https://ibb.co/Hxc5Rjw
+T 1556554715 31<crybot>30	ha il suo perche` dai
+T 1556554739 31<crybot>30	mo lo metto pure semitrasparente
+T 1556554764 27<171822Franciman27>	figo
+T 1556554767 27<171822Franciman27>	sembra un'app del terminale
+T 1556554767 31<crybot>30	la cosa del tray mi ha mandato in fissa
+T 1556554778 27<171822Franciman27>	è troppo bella lol
+T 1556554811 21<Franciman>21	crybot, io sono in fissa con questo:
+T 1556554811 27<171822Franciman27>	http://i.imgur.com/buO6PTX.png
+T 1556554820 27<171822Franciman27>	tema
+T 1556554834 31<crybot>30	Franciman, bellissimo
+T 1556554864 31<crybot>30	pero` mi tengo solarized
+T 1556554866 31<crybot>30	riposa gli occhi
+T 1556554868 31<crybot>30	ed e` gradevole
+T 1556554897 31<crybot>30	oh sto tentando di finire la giornata lavorativa senza caricare il pc
+T 1556554906 31<crybot>30	perche` porca troia ho lasciato a casa il caricatore lol
+T 1556554920 27<171822Franciman27>	fugo
+T 1556554922 31<crybot>30	pero` dovrebbe durare ancora un paio di ore
+T 1556554923 27<171822Franciman27>	figo
+T 1556554931 27<171822Franciman27>	allora smetti di parlarmi
+T 1556554939 31<crybot>30	Franciman, perche` inizi con uno spazio?
+T 1556554944 31<crybot>30	ah no
+T 1556554948 31<crybot>30	e` hexchat che indenta
+T 1556554957 31<crybot>30	stupido hexchat, fammi togliere sta cosa
+T 1556554961 27<171822Franciman27>	asd
+T 1556554972 31<crybot>30 brb
+T 1556554975 FiSHLiM plugin unloaded
+T 1556554989 19* 19Now talking on #bugbyte-ita
+T 1556554995 31<crybot>30 ok, molto meglio
+T 1556555004 27<171822Franciman27> yo
+T 1556555056 31<crybot>30 Franciman, sei tornato dal viaggio?
+T 1556555063 27<171822Franciman27> sìsì
+T 1556555064 27<171822Franciman27> ieri
+T 1556555068 31<crybot>30 com'e` andata?
+T 1556555074 27<171822Franciman27> è stato parecchio bello
+T 1556555080 27<171822Franciman27> ti sono piaciute le mie foto?
+T 1556555083 27<171822Franciman27> o erano solo noiose?
+T 1556555132 31<crybot>30 lol, sei stato molto manuel
+T 1556555149 27<171822Franciman27> shit
+T 1556555150 27<171822Franciman27> volevo evitare
+T 1556555162 27<171822Franciman27> vabbè manuel mette cose belle
+T 1556555172 27<171822Franciman27> però le sue cose dicono: guarda che superiorità
+T 1556555188 31<crybot>30 LOL
+T 1556555189 27<171822Franciman27> di solito
+T 1556555193 27<171822Franciman27> non sempre, eh
+T 1556555200 31<crybot>30 non e` vero
+T 1556555201 27<171822Franciman27> anzi mi sbaglio
+T 1556555202 27<171822Franciman27> non è vero
+T 1556555209 31<crybot>30 in genere dicono: "guarda che superiorita` la finlandia"
+T 1556555217 27<171822Franciman27> lol
+T 1556555225 21<Franciman>21 crybot, la svizzera secondo me supera la finlandia, cazzo
+T 1556555228 27<171822Franciman27> quella gente è pazza
+T 1556555234 27<171822Franciman27> i pullman passano ogni 2 minuti
+T 1556555237 27<171822Franciman27> cioè GIURO
+T 1556555238 31<crybot>30 cazzo
+T 1556555239 27<171822Franciman27> OGNI 2 CAZZO DI MINUTI
+T 1556555242 31<crybot>30 CAZZO
+T 1556555245 27<171822Franciman27> OGNI 2 MINUTI C'È IL PULLMAN CHE TI SERVE
+T 1556555253 22* You are now known as crybotten
+T 1556555256 27<171822Franciman27> poi se tipo loro hanno il verde
+T 1556555258 27<171822Franciman27> e tu attraversi
+T 1556555259 27<171822Franciman27> si fermano
+T 1556555266 27<171822Franciman27> a milano ci hanno suonato di brutto
+T 1556555267 27<171822Franciman27> lì no
+T 1556555270 27<171822Franciman27> rispetto assoluto
+T 1556555272 21<Franciman>21 poi crybotten 
+T 1556555274 27<171822Franciman27> cosa cazzo ho visto
+T 1556555282 27<171822Franciman27> una persona raccogliere un ombrello da terra
+T 1556555287 31<crybotten>30 me l'hai detto lol
+T 1556555288 27<171822Franciman27> per riporlo sul ciglio della strada
+T 1556555292 27<171822Franciman27> ma che cazzo è
+T 1556555300 27<171822Franciman27> cmq belle anche le svizzere
+T 1556555308 27<171822Franciman27> a tette sono un po' scarse
+T 1556555313 27<171822Franciman27> però hanno dei bei volti e delle belle gambe
+T 1556555340 21<Franciman>21 crybotten, lol ora che ci penso
+T 1556555346 27<171822Franciman27> i miei racconti dicono: guarda che superiorità Franciman 
+T 1556555347 27<171822Franciman27> cazzo
+T 1556555349 27<171822Franciman27> devo smetterla
+T 1556555368 31<crybotten>30 trolol
+T 1556555373 31<crybotten>30 mi fa piacere ti sia divertito
+T 1556555382 27<171822Franciman27> stavo per raccontarti delle tizie che ci volevano provare con me
+T 1556555384 27<171822Franciman27> ma non lo farò
+T 1556555393 31<crybotten>30 fai bene
+T 1556555402 31<crybotten>30 no ma scusa
+T 1556555402 21<Franciman>21 sto crescendo, crybotten 
+T 1556555405 31<crybotten>30 perche` ho questo ip
+T 1556555409 31<crybotten>30 ho messo il .72
+T 1556555409 21<Franciman>21 perché sei crybotten 
+T 1556555413 31<crybotten>30 mannaggia al cristo
+T 1556555423 31<crybotten>30 networkmanager di merda
+T 1556555441 31<crybotten>30 vabbe`, funziona pure il dhcp, chissenefotte
+T 1556555542 27<171822Franciman27> yay
+T 1556555546 21<Franciman>21 crybotten, tu che mi dici?
+T 1556555551 27<171822Franciman27> oltre endgame?
+T 1556555557 27<171822Franciman27> plz non spoilerare che io vado domani
+T 1556555601 31<crybotten>30 DAMN
+T 1556555604 31<crybotten>30 ancora non l'haii visto
+T 1556555614 31<crybotten>30 Franciman, diobuono
+T 1556555618 31<crybotten>30 l'ho visto due volte
+T 1556555621 31<crybotten>30 vai a vederlo subito lol
+T 1556555640 31<crybotten>30 io non ho molto da raccontare
+T 1556555647 31<crybotten>30 il matebook l'ho chiamato Giulio
+T 1556555664 31<crybotten>30 stasera mi guardo got, che stamattina non ho avuto tempo
+T 1556555669 31<crybotten>30 moriranno tutti, ovviamente
+T 1556555671 27<171822Franciman27> lol
+T 1556555674 31<crybotten>30 pero` non vedo l'ora
+T 1556555763 21<Franciman>21 crybotten, secondo te
+T 1556555776 27<171822Franciman27> cioè tu sei più esperto di me
+T 1556555798 27<171822Franciman27> anzi niente
+T 1556555799 27<171822Franciman27> lascia stare
+T 1556555813 21<Franciman>21 <crybotten> il matebook l'ho chiamato Giulio <- bel nome
+T 1556555891 31<crybotten>30 Franciman, dimmi zio
+T 1556555977 27<171822Franciman27> boh
+T 1556555986 27<171822Franciman27> nientee
+T 1556555994 27<171822Franciman27> era una domanda che non so formularti bene
+T 1556555997 27<171822Franciman27> secondo me non ha senso
+T 1556556000 27<171822Franciman27> quindi nvm
+T 1556556107 31<crybotten>30 Franciman, guarda che eleganza
+T 1556556170 31<crybotten>30 https://pastebin.com/aH7pauMM
+T 1556556180 31<crybotten>30 per salvarmi i file di configurazione
+T 1556556196 31<crybotten>30 cosi` quando edito qualcosa faccio saveconf ~/.conf/filediconfigurazione
+T 1556556204 31<crybotten>30 e me lo salva nella cartella versionata
+T 1556556227 31<crybotten>30 con tutta la gerarchia del fs
+T 1556556256 31<crybotten>30 cosi` poi posso deployarla come cp -r dot-files/matebook/* /
+T 1556556270 31<crybotten>30 e senti quanto e` meta
+T 1556556272 31<crybotten>30 ho fatto
+T 1556556289 31<crybotten>30 ./saveconf.sh ./saveconf.sh
+T 1556556291 31<crybotten>30 asd
+T 1556556497 27<171822Franciman27> lel
+T 1556556498 27<171822Franciman27> bello
+T 1556556550 21<Franciman>21 crybotten, la tezi l'hai iniziato a leggere quel pdf che mi passasti?
+T 1556556553 27<171822Franciman27> per la tasi*
+T 1556556580 31<crybotten>30 si`, l'ho letto
+T 1556556621 31<crybotten>30 Franciman, ho un'idea per arch-config lol
+T 1556556626 31<crybotten>30 ti ricordi?
+T 1556556633 27<171822Franciman27> sì
+T 1556556667 31<crybotten>30 possiamo tenere una lista di file o directory da seguire, e un demone che esegue saveconf se quel file/directory viene modificato
+T 1556556707 31<crybotten>30 riloggo, brb
+T 1556556710 FiSHLiM plugin unloaded
+T 1556556744 19* 19Now talking on #bugbyte-ita
+T 1556556757 21<Franciman>21 crybot, sì
+T 1556556769 31<crybot>30 devo riloggare asd
+T 1556556794 19* 19Now talking on #bugbyte-ita
+T 1556556801 31<crybot>30 oh, ora si`
+T 1556556803 31<crybot>30 caspita
+T 1556556846 31<crybot>30 https://ibb.co/wCzLKgY
+T 1556556865 21<Franciman>21 bello crybot 
+T 1556556902 31<crybot>30 peccato che si debba chiudere xorg per configurare compton
+T 1556556932 19* 19Now talking on #bugbyte-ita
+T 1556556946 27<171822Franciman27> cos'è compton?
+T 1556556964 31<crybot>30 Franciman, un compositor
+T 1556557022 31<crybot>30 in pratica ti salva la gerarchia delle finestre in una zona globale alla quale tutte le applcazioni possono accedere
+T 1556557024 27<171822Franciman27> mi spieghi cos'è?
+T 1556557031 31<crybot>30 cosi` puoi gestire roba come trasparenza, ombre, etc
+T 1556557036 27<171822Franciman27> chiaro
+T 1556557140 31<crybot>30 domani viene lumo_e
+T 1556557156 31<crybot>30 sperando non mi faccia fare brutte figure lol
+T 1556557329 27<171822Franciman27> dai
+T 1556557336 27<171822Franciman27> so che dici così perché sei felice
+T 1556557521 21<Franciman>21 crybot, ma ora viene a vivere a pixa?
+T 1556557663 31<crybot>30 boh
