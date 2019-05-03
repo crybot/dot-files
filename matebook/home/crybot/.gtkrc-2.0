@@ -1,1 +1,3 @@
-gtk-theme-name = "SolArc-Dark"
+# gtk-theme-name = "SolArc-Dark"
+gtk-theme-name = "Arc-Dark"
+# gtk-theme-name = "Numix"
