@@ -6,4 +6,6 @@ if [ "$EUID" -ne 0 ]
 fi
 
 cpupower frequency-set -g powersave &&
-cpupower frequency-set --max 2GHz
+cpupower frequency-set --max 2GHz &&
+pkill compton &&
+xbacklight -set 35
