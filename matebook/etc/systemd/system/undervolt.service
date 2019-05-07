@@ -1,0 +1,11 @@
+[Unit]
+Description=undervolt
+
+[Service]
+Type=oneshot
+# Wait 2 minutes after boot to give you time in case of crash to disable the service
+ExecStartPre=/bin/sleep 120
+ExecStart=~/undervolt/undervolt.py -v --core -100 --cache -100 --gpu 0
+
+[Install]
+WantedBy=multi-user.target

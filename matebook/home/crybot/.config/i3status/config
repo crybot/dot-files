@@ -9,23 +9,23 @@
 general {
         # output_format = "i3bar"
         colors = true
-        interval = 5
+        interval = 1
 	markup = "pango"
 }
 
-# order += "ipv6"
 order += "wireless _first_"
 order += "ethernet _first_"
 order += "battery all"
 order += "disk /"
-# order += "load"
+order += "load"
 order += "cpu_usage"
 order += "cpu_temperature 0"
+order += "volume master"
 order += "tztime local"
 
 wireless _first_ {
-        format_up = "🐧 W: (%quality at %essid) %ip"
-        format_down = "🐧 W: down"
+        format_up = ":%quality at %essid"
+        format_down = "🐧  : down"
 }
 
 ethernet _first_ {
@@ -35,10 +35,10 @@ ethernet _first_ {
 
 battery all {
         # format = "%status %percentage %remaining"
-	format = "%status %percentage Remaining: %remaining"
+	format = "%status %percentage Remaining : %remaining"
         format_down = "No battery"
         status_chr = "⚡"
-        status_bat = "🔋"
+        status_bat = ":"
         status_unk = "? UNK"
         status_full = "💯"
         path = "/sys/class/power_supply/BAT%d/uevent"
@@ -47,30 +47,31 @@ battery all {
 }
 
 disk "/" {
-        format = "%avail"
+        format = ": %avail"
 }
 
 load {
-        format = "%1min"
+        format = ": %1min"
 }
 
 cpu_usage {
-	format = "CPU: %usage"
+	format = ": %usage"
 	degraded_threshold = 30
 	max_threshold = 90
 }
 
 cpu_temperature 0 {
-	format = "Temp: %degrees °C"
-	path = "/sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input"
+	format = ": %degrees °C"
+	path = "/sys/devices/platform/coretemp.0/hwmon/hwmon*/temp1_input"
 }
 
-# memory {
-        # format = "%used | %available"
-        # threshold_degraded = "1G"
-        # format_degraded = "MEMORY < %available"
-# }
+volume master {
+        format = ": %volume"
+        format_muted = ": %volume"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+}
 
 tztime local {
-        format = "Time: %d-%m-%Y %H:%M:%S"
-}
+        format = ": %H:%M:%S"

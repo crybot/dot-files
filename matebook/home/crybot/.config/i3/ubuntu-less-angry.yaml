@@ -1,0 +1,46 @@
+---
+meta:
+  description: AUTOMATICALLY GENERATED THEME
+colors:
+  darkslategray: "#333333"
+  black: "#2C001E"
+  darkgray: "#AEA79F"
+  chocolate: "#DD4814"
+  white: "#FFFFFF"
+  saddlebrown: "#902A07"
+  purple: "#77216F"
+  darkslategray-1: "#5E2750"
+  sandybrown: "#EFB73E"
+window_colors:
+  focused:
+    border: saddlebrown
+    background: saddlebrown
+    text: white
+    indicator: saddlebrown
+  focused_inactive:
+    border: darkslategray-1
+    background: darkslategray-1
+    text: darkgray
+    indicator: darkslategray-1
+  unfocused:
+    border: darkslategray-1
+    background: darkslategray-1
+    text: darkgray
+    indicator: darkslategray-1
+  urgent:
+    border: purple
+    background: purple
+    text: white
+    indicator: sandybrown
+bar_colors:
+  background: black
+  statusline: darkgray
+  separator: darkslategray
+  focused_workspace:
+    border: chocolate
+    background: chocolate
+    text: white
+  urgent_workspace:
+    border: purple
+    background: purple
+    text: white
