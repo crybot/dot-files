@@ -59,13 +59,21 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl -- set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+#
+set $volume "$(amixer -c 0 -M -D pulse get Master | grep -o -E [[:digit:]]+% | head -1)"
 
+#increase sound volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl -- set-sink-volume 0 +5% && notify-send "Volume: $volume"
+#decrease sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -5% && notify-send "Volume: $volume"
+# mute sound
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle 
+
+# set $brightness "$(xbacklight)/1 | bc"
+set $brightness "$(echo $(xbacklight)/1 | bc)%"
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -time 0 -steps 1 -inc 5 # increase screen brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -time 0 -steps 1 -dec 5 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -time 0 -steps 1 -inc 5 && notify-send "Brightness: $brightness" # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -time 0 -steps 1 -dec 5 && notify-send "Brightness: $brightness" # decrease screen brightness
 
 # Toggle performance/powersave mode
 bindsym XF86Tools exec --no-startup-id sudo /usr/local/bin/toggle-performance-mode

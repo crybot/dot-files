@@ -1,11 +1,19 @@
 [Unit]
 Description=undervolt
+After=suspend.target sleep.target hibernate.target
+# Requires=systemd-modules-load.target
 
 [Service]
+User=root
 Type=oneshot
 # Wait 2 minutes after boot to give you time in case of crash to disable the service
-ExecStartPre=/bin/sleep 120
-ExecStart=~/undervolt/undervolt.py -v --core -100 --cache -100 --gpu 0
+# ExecStartPre=/bin/sleep 120
+ExecStart=/home/crybot/undervolt/undervolt.py -v --core -115 --cache -115 --gpu -55
+TimeoutSec=0
+StandardOutput=syslog
 
 [Install]
+WantedBy=sleep.target
+WantedBy=suspend.target
+WantedBy=hibernate.target
 WantedBy=multi-user.target

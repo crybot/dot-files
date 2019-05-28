@@ -185,6 +185,18 @@
 # NOTE: It might be helpful to run dunst -print in a terminal in order to find
 # fitting options for rules.
 
+[stack-volumes]
+    summary = "Volume:*"
+    set_stack_tag = "volume"
+
+[stack-brightness]
+    summary = "Brightness:*"
+    set_stack_tag = "brightness"
+
+[stack-performance-mode]
+    icon = "/home/crybot/Downloads/battery.png"
+    set_stack_tag = "performance-mode"
+
 #[espeak]
 #    summary = "*"
 #    script = dunst_espeak.sh

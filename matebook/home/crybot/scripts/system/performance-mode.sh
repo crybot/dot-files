@@ -5,9 +5,20 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
+# Set the performance cpu governor and scale up clock frequencies
 cpupower frequency-set -g performance &&
 cpupower frequency-set --max 4GHz &&
+
+# Change energy performance hints to performance.
+# Available hints are (in order of increasing power saving) : performance, balance_performance, balance_power, power
+sed -i 's/CPU_HWP_ON_AC=.*/CPU_HWP_ON_AC=performance/g' /etc/default/tlp &&
+sed -i 's/CPU_HWP_ON_BAT=.*/CPU_HWP_ON_BAT=performance/g' /etc/default/tlp &&
+
+# Restart the composition manager to enable transparency
+killall compton 
 compton -CGb --config ~/.config/compton/compton.conf &&
-xbacklight -set 50
+
+# Set backlight to a normal value
+xbacklight -set 70
 
 
