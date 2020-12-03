@@ -7,7 +7,5 @@ Environment="TERM=dumb"
 ExecStartPre=/bin/sleep 30
 ExecStart=/usr/sbin/powertop --auto-tune
 
-
-
 [Install]
 WantedBy=multi-user.target

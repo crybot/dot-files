@@ -8,7 +8,7 @@ User=root
 Type=oneshot
 # Wait 2 minutes after boot to give you time in case of crash to disable the service
 # ExecStartPre=/bin/sleep 120
-ExecStart=/home/crybot/undervolt/undervolt.py -v --core -115 --cache -115 --gpu -55
+ExecStart=/home/crybot/undervolt/undervolt.py -v --core -95 --cache -95 --gpu -40
 TimeoutSec=0
 StandardOutput=syslog
 
