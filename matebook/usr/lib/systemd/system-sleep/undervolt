@@ -2,6 +2,7 @@
 
 case $1 in
   post)
-    /home/crybot/undervolt/undervolt.py -v --core -115 --cache -115 --gpu -55
+    systemctl restart undervolt.service
+    # /home/crybot/undervolt/undervolt.py -v --core -100 --cache -100 --gpu -50
     ;;
 esac

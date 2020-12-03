@@ -1,9 +1,14 @@
 #!/bin/bash
 
-if [ $# -ne 1 ]; then
-	echo "usage: saveconf <file>"
-	exit 1
-fi
+# if [ $# -ne 1 ]; then
+# 	echo "usage: saveconf <file>"
+# 	exit 1
+# fi
 
-cp -r --parents `realpath $1` ~/dot-files/matebook/
+args=("$@")
+
+for ((i=0; i < $#; i++))
+do
+  cp -r --parents `realpath ${args[$i]}` ~/dot-files/matebook/
+done
 

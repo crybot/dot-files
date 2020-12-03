@@ -194,7 +194,7 @@
     set_stack_tag = "brightness"
 
 [stack-performance-mode]
-    icon = "/home/crybot/Downloads/battery.png"
+    icon = "/home/crybot/.config/dunst/battery.png"
     set_stack_tag = "performance-mode"
 
 #[espeak]

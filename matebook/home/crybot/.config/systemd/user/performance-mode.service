@@ -1,0 +1,11 @@
+[Unit]
+Description=power mode service
+After=sleep.target suspend.target hibernate.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/crybot/scripts/system/apply-power-mode.sh
+
+[Install]
+WantedBy=multi-user.target
+WantedBy=sleep.target

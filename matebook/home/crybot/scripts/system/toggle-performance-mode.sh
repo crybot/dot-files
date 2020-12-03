@@ -19,10 +19,10 @@ else
 fi
 
 if [ $(<$path) == "performance" ]; then
-	notify-send -i ~/Downloads/battery.png -t 3000 "performance mode enabled" -u normal
-	/usr/local/bin/performance-mode
+	notify-send -i /home/crybot/.config/dunst/battery.png -t 3000 "performance mode enabled" -u normal
+	sudo /usr/local/bin/performance-mode
 else
-	notify-send -i ~/Downloads/battery.png -t 3000 "powersave mode enabled" -u low
-	/usr/local/bin/powersave-mode
+	notify-send -i /home/crybot/.config/dunst/battery.png -t 3000 "powersave mode enabled" -u low
+	sudo /usr/local/bin/powersave-mode
 fi
 

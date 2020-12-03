@@ -1,7 +1,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
 Plug 'jumski/vim-colors-solarized' "altercation column sign fix
 Plug 'itchyny/vim-haskell-indent'
 " Plug 'dag/vim2hs'
@@ -11,7 +11,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'neomake/neomake'
 Plug 'Shougo/deoplete.nvim'
 Plug 'bitc/vim-hdevtools'
-" Plug 'alx741/vim-hindent'
+Plug 'alx741/vim-hindent'
 " Plug 'gilligan/vim-textobj-haskell'
 " Plug 'iamcco/markdown-preview.vim'
 Plug 'posva/vim-vue'
@@ -19,7 +19,6 @@ Plug 'leafgarland/typescript-vim'
 Plug 'zchee/deoplete-jedi'
 Plug 'vhda/verilog_systemverilog.vim'
 Plug 'LaTeX-Box-Team/LaTeX-Box'
-Plug 'dart-lang/dart-vim-plugin'
 
 call plug#end()
 
@@ -31,7 +30,7 @@ let g:deoplete#enable_at_startup = 1
 " Trigger neomake whenever text is changed in normal mode, leaving insert
 " mode or not pressing any key for 'updatetime' ms while in insert mode
 autocmd TextChanged,InsertLeave,CursorHoldI *.java,*.hs,*.c,*.tex update | Neomake
-" set updatetime=1500 "wait 1.5 second of inactivity before checking for errors
+set updatetime=1500 "wait 1.5 second of inactivity before checking for errors
 
 " REMAPPINGS
 nnoremap <C-l> gt 
