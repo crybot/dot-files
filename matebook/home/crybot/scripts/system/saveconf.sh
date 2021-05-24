@@ -9,6 +9,6 @@ args=("$@")
 
 for ((i=0; i < $#; i++))
 do
-  cp -r --parents `realpath ${args[$i]}` ~/dot-files/matebook/
+  cp -r --parents `realpath ${args[$i]}` /home/crybot/dot-files/matebook/
 done
 
