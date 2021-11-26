@@ -9,6 +9,11 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+# Restore GNOME's settings
+exec --no-startup-id /usr/libexec/gnome-settings-daemon-localeexec
+# Fix a bug in gnome-settings-daemon: http://feeding.cloud.geek.nz/posts/creating-a-modern-tiling-desktop-environment-using-i3/
+exec --no-startup-id dconf write /org/gnome/settings-daemon/plugins/cursor/active false
+
 # Set display dpi
 exec --no-startup-id xrandr --dpi 259
 
@@ -76,10 +81,13 @@ bindsym XF86AudioPause exec playerctl play-pause
 
 
 # set $brightness "$(xbacklight)/1 | bc"
-set $brightness "$(echo $(xbacklight)/1 | bc)%"
+# set $brightness "$(echo $(xbacklight)/1 | bc)%"
+set $brightness "$(echo $(light)/1 | bc)%"
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5 -time 0 -steps 1 && notify-send "Brightness: $brightness" # increase screen brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5 -time 0 -steps 1 && notify-send "Brightness: $brightness" # decrease screen brightness
+# bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5 -time 0 -steps 1 && notify-send "Brightness: $brightness" # increase screen brightness
+# bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5 -time 0 -steps 1 && notify-send "Brightness: $brightness" # decrease screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id sudo light -A 5 && notify-send "Brightness: $brightness" # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id sudo light -U 5 && notify-send "Brightness: $brightness" # decrease screen brightness
 
 bindsym $mod+x exec --no-startup-id /usr/local/bin/zoomin
 bindsym $mod+z exec --no-startup-id /usr/local/bin/zoomout

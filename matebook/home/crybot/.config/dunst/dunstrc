@@ -197,6 +197,13 @@
     icon = "/home/crybot/.config/dunst/battery.png"
     set_stack_tag = "performance-mode"
 
+[HexChat]
+    appname = HexChat
+    timeout = 0
+    background = "#94DBFF"
+    foreground = "#000000"
+
+
 #[espeak]
 #    summary = "*"
 #    script = dunst_espeak.sh
