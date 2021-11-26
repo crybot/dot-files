@@ -1,3 +1,3 @@
 #!/bin/bash
 
-setupmonitor 0.5
+setupmonitor 0.25
