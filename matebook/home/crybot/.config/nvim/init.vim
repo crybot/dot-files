@@ -1,32 +1,47 @@
 call plug#begin('~/.local/share/nvim/plugged')
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'jumski/vim-colors-solarized' "altercation column sign fix
-Plug 'itchyny/vim-haskell-indent'
-" Plug 'dag/vim2hs'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-dispatch'
 Plug 'neomake/neomake'
 Plug 'Shougo/deoplete.nvim'
-Plug 'bitc/vim-hdevtools'
+Plug 'zchee/deoplete-jedi'
+Plug 'jiangmiao/auto-pairs'
+Plug 'alvan/vim-closetag'
+Plug 'lervag/vimtex'
+Plug 'maxmx03/solarized.nvim'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'nvim-tree/nvim-tree.lua'
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'DanilaMihailov/beacon.nvim'
+" Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+" Plug 'bitc/vim-hdevtools'
 " Plug 'alx741/vim-hindent'
 " Plug 'gilligan/vim-textobj-haskell'
 " Plug 'iamcco/markdown-preview.vim'
-Plug 'posva/vim-vue'
-Plug 'leafgarland/typescript-vim'
-Plug 'zchee/deoplete-jedi'
-Plug 'vhda/verilog_systemverilog.vim'
-Plug 'LaTeX-Box-Team/LaTeX-Box'
-Plug 'dart-lang/dart-vim-plugin'
-Plug 'MaxMEllon/vim-jsx-pretty'
-Plug 'jiangmiao/auto-pairs'
-Plug 'alvan/vim-closetag'
+" Plug 'jumski/vim-colors-solarized' "altercation column sign fix
+" Plug 'itchyny/vim-haskell-indent'
+" Plug 'dag/vim2hs'
+" Plug 'posva/vim-vue'
+" Plug 'leafgarland/typescript-vim'
+" Plug 'vhda/verilog_systemverilog.vim'
+" Plug 'LaTeX-Box-Team/LaTeX-Box'
+" Plug 'dart-lang/dart-vim-plugin'
+" Plug 'MaxMEllon/vim-jsx-pretty'
+
+"
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 call plug#end()
 
-au BufRead,BufNewFile *.tex setlocal textwidth=79
+" au BufRead,BufNewFile *.tex setlocal textwidth=79
+
+" let g:airline_theme = 'catppuccin'
+" let g:airline_powerline_fonts = 1
+" let g:airline_extensions = []
+" let g:airline_highlighting_cache = 1
 
 let g:deoplete#enable_at_startup = 1
 
@@ -83,11 +98,18 @@ let g:closetag_shortcut = '>'
 "
 let g:closetag_close_shortcut = '<leader>>'
 
+" VIMTEX SETTINGS
+
+" Viewer options: One may configure the viewer either by specifying a built-in
+" viewer method:
+let g:vimtex_view_method = 'zathura'
+let g:vimtex_compiler_method = 'latexmk'
+
 
 " Neomake asynchronous linting
 " Trigger neomake whenever text is changed in normal mode, leaving insert
 " mode or not pressing any key for 'updatetime' ms while in insert mode
-autocmd TextChanged,InsertLeave,CursorHoldI *.js,*.css,*.java,*.hs,*.c,*.tex update | Neomake
+" autocmd TextChanged,InsertLeave,CursorHoldI *.js,*.css,*.java,*.hs,*.c,*.tex update | Neomake
 " set updatetime=1500 "wait 1.5 second of inactivity before checking for errors
 
 " REMAPPINGS
@@ -97,8 +119,14 @@ nnoremap <C-p> :nohlsearch <Cr>
 tnoremap <Esc> <C-\><C-n> 
 tmap <C-l> <Esc>gt
 tmap <C-h> <Esc>gT
+nnoremap <C-n> :NvimTreeToggle<CR>
 
-colorscheme solarized
+" xnoremap i$ :<C-u> normal! T$vt$<CR>
+" onoremap i$ :normal vi$<CR>
+" xnoremap a$ :<C-u> normal!F$vf$<CR>
+" onoremap a$ :normal va$<CR>
+
+
 filetype plugin on
 filetype indent on
 syntax on
@@ -113,3 +141,63 @@ set number
 set omnifunc=syntaxcomplete#Complete
 set cursorline
 set colorcolumn=80
+set clipboard=unnamedplus
+set encoding=UTF-8
+colorscheme catppuccin
+
+
+lua require('nvim-web-devicons').setup { default = true }
+
+lua << END
+    -- disable netrw at the very start of your init.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- optionally enable 24-bit colour
+vim.opt.termguicolors = true
+
+-- empty setup using defaults
+require("nvim-tree").setup()
+
+-- OR setup with some options
+require("nvim-tree").setup({
+  sort = {
+    sorter = "case_sensitive",
+  },
+  view = {
+    width = 30,
+  },
+  renderer = {
+    group_empty = true,
+  },
+  filters = {
+    dotfiles = true,
+  },
+})
+END
+
+lua << EOF
+require('lualine').setup {
+  options = {
+    theme = 'auto',
+    section_separators = { right = '', left = '' },
+    -- component_separators = { right = '', left = '' },
+    component_separators = { right = '', left = '' },
+    icons_enabled = true,
+  },
+  sections = {
+    lualine_a = {
+      function() return '' end, 'mode'
+    },
+    lualine_b = {'branch'},
+    lualine_c = {
+      {'filename', path = 1}, -- Shows file and folder
+    },
+    lualine_x = {'diagnostics', 'encoding', 'fileformat', 'filetype'},
+    lualine_y = {'progress'},
+    lualine_z = {'location'},
+  }
+}
+EOF
+
+lua require('beacon').setup()

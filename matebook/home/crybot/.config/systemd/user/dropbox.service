@@ -1,0 +1,10 @@
+[Unit]
+Description=dropbox service
+After=local-fs.target network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/env "/home/crybot/.dropbox-dist/dropboxd"
+
+[Install]
+WantedBy=default.target

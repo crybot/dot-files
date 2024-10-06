@@ -22,7 +22,8 @@ exec --no-startup-id compton -CGb --config ~/.config/compton/compton.conf
 
 # Set Background Wallpaper
 # exec --no-startup-id feh --bg-scale ~/Pictures/backgrounds/disco-dingo-art.png &
-exec --no-startup-id feh --bg-scale ~/Pictures/backgrounds/warty-final-ubuntu.png &
+# exec --no-startup-id feh --bg-scale ~/Pictures/backgrounds/warty-final-ubuntu.png &
+exec --no-startup-id feh --bg-fill ~/Pictures/backgrounds/sukuna_background2.jpg &
 
 # Launch network-manager applet
 exec --no-startup-id nm-applet &
@@ -97,7 +98,8 @@ bindsym XF86Tools exec --no-startup-id /usr/local/bin/toggle-performance-mode
 
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec --no-startup-id urxvt
+# bindsym $mod+Return exec --no-startup-id wezterm
+bindsym $mod+Return exec --no-startup-id alacritty
 
 # kill focused window
 bindsym $mod+Shift+c kill
@@ -251,15 +253,18 @@ bar {
 		status_command i3status
 		colors {
 			separator #333333
-				background #2C001E
+				background #11111b
 				statusline #AEA79F
-				focused_workspace #DD4814 #DD4814 #FFFFFF #ffffff
-				active_workspace #333333 #333333 #ffffff #aea79f
+				focused_workspace #89b4fa #89b4fa #000000 #ffffff
+				active_workspace #333333 #333333 #000000 #aea79f
 				inactive_workspace #333333 #333333 #888888 #aea79f
-				urgent_workspace #77216F #77216F #FFFFFF #ffffff
+				urgent_workspace #6c7086 #6c7086 #FFFFFF #ffffff
 		}
 }
-client.focused #902A07 #902A07 #FFFFFF #902A07
-client.focused_inactive #5E2750 #5E2750 #AEA79F #5E2750
-client.unfocused #5E2750 #5E2750 #AEA79F #5E2750
-client.urgent #77216F #77216F #FFFFFF #EFB73E
+client.focused          #89b4fa #89b4fa #000000 #cdd6f4 
+client.focused_inactive #6c7086 #6c7086 #FFFFFF #6c7086 
+client.unfocused        #6c7086 #6c7086 #FFFFFF #6c7086 
+client.urgent           #77216F #77216F #FFFFFF #EFB73E 
+
+hide_edge_borders smart
+default_border pixel 1
