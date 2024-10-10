@@ -1,10 +1,9 @@
+lua vim.loader.enable()
+
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-dispatch'
-Plug 'neomake/neomake'
-Plug 'Shougo/deoplete.nvim'
-Plug 'zchee/deoplete-jedi'
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 Plug 'lervag/vimtex'
@@ -14,24 +13,20 @@ Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'DanilaMihailov/beacon.nvim'
-" Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-" Plug 'vim-airline/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
-" Plug 'bitc/vim-hdevtools'
-" Plug 'alx741/vim-hindent'
-" Plug 'gilligan/vim-textobj-haskell'
-" Plug 'iamcco/markdown-preview.vim'
-" Plug 'jumski/vim-colors-solarized' "altercation column sign fix
-" Plug 'itchyny/vim-haskell-indent'
-" Plug 'dag/vim2hs'
-" Plug 'posva/vim-vue'
-" Plug 'leafgarland/typescript-vim'
-" Plug 'vhda/verilog_systemverilog.vim'
-" Plug 'LaTeX-Box-Team/LaTeX-Box'
-" Plug 'dart-lang/dart-vim-plugin'
-" Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
+Plug 'goolord/alpha-nvim'
 
-"
+" Autocompletion plugins
+Plug 'hrsh7th/nvim-cmp'             " Autocompletion plugin
+Plug 'hrsh7th/cmp-nvim-lsp'         " LSP source for nvim-cmp
+Plug 'hrsh7th/cmp-buffer'           " Buffer completions
+Plug 'hrsh7th/cmp-path'             " Path completions
+Plug 'hrsh7th/cmp-cmdline'          " Command line completions
+Plug 'saadparwaiz1/cmp_luasnip'     " Snippet completions
+Plug 'L3MON4D3/LuaSnip'             " Snippet engine
+Plug 'neovim/nvim-lspconfig'        " LSP configurations
+
+" Plug 'neomake/neomake'
 " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 call plug#end()
@@ -46,13 +41,13 @@ call plug#end()
 let g:deoplete#enable_at_startup = 1
 
 " Neomake
-let g:neomake_error_sign = {'text': '✖', 'texthl': 'FoldColumn'}
-let g:neomake_warning_sign = {'text': '➤', 'texthl': 'FoldColumn'}
-let g:neomake_message_sign = {'text': 'M', 'texthl': 'FoldColumn'}
-let g:neomake_info_sign = {'text': 'ℹ', 'texthl': 'FoldColumn'}
-
-let g:neomake_javascript_enabled_makers = ['eslint']
-let g:neomake_jsx_enabled_makers = ['eslint']
+" let g:neomake_error_sign = {'text': '✖', 'texthl': 'FoldColumn'}
+" let g:neomake_warning_sign = {'text': '➤', 'texthl': 'FoldColumn'}
+" let g:neomake_message_sign = {'text': 'M', 'texthl': 'FoldColumn'}
+" let g:neomake_info_sign = {'text': 'ℹ', 'texthl': 'FoldColumn'}
+" 
+" let g:neomake_javascript_enabled_makers = ['eslint']
+" let g:neomake_jsx_enabled_makers = ['eslint']
 
 
 " filenames like *.xml, *.html, *.xhtml, ...
@@ -184,6 +179,7 @@ require('lualine').setup {
     -- component_separators = { right = '', left = '' },
     component_separators = { right = '', left = '' },
     icons_enabled = true,
+    -- disabled_filetypes = { 'NvimTree' }
   },
   sections = {
     lualine_a = {
@@ -193,7 +189,7 @@ require('lualine').setup {
     lualine_c = {
       {'filename', path = 1}, -- Shows file and folder
     },
-    lualine_x = {'diagnostics', 'encoding', 'fileformat', 'filetype'},
+    lualine_x = {'diagnostics', 'encoding', 'filetype'},
     lualine_y = {'progress'},
     lualine_z = {'location'},
   }
@@ -201,3 +197,69 @@ require('lualine').setup {
 EOF
 
 lua require('beacon').setup()
+
+set mousemoveevent
+set termguicolors
+lua << EOF
+require("bufferline").setup{
+        options = {
+            mode = "tabs",
+            themable = true,
+            separator_style = "slant",
+            indicator = {
+                icon = 'O', -- this should be omitted if indicator style is not 'icon'
+                style = 'icon'
+            },
+        }
+    }
+EOF
+
+
+lua << EOF
+  local startify = require('alpha.themes.startify')
+  startify.file_icons.provider = "devicons"
+  require('alpha').setup(startify.config)
+EOF
+
+
+" Setup nvim-cmp
+"
+lua << EOF
+local cmp = require'cmp'
+
+cmp.setup({
+  snippet = {
+    expand = function(args)
+      require('luasnip').lsp_expand(args.body) -- Expand snippets
+    end,
+  },
+  window = {
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
+  },
+ mapping = cmp.mapping.preset.insert({
+      ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+      ['<C-f>'] = cmp.mapping.scroll_docs(4),
+      ['<C-Space>'] = cmp.mapping.complete(),
+      ['<C-e>'] = cmp.mapping.abort(),
+      ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+    }),
+  sources = cmp.config.sources({
+    { name = 'nvim_lsp' },   -- LSP source
+    { name = 'luasnip' },    -- Snippet source
+  }, {
+    { name = 'buffer' },     -- Buffer source
+  })
+})
+EOF
+
+" LSP Configuration
+"
+lua << EOF
+local lspconfig = require'lspconfig'
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+lspconfig.pyright.setup {
+  capabilities = capabilities,
+}
+EOF
