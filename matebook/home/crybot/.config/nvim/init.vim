@@ -24,9 +24,12 @@ Plug 'hrsh7th/cmp-path'             " Path completions
 Plug 'hrsh7th/cmp-cmdline'          " Command line completions
 Plug 'saadparwaiz1/cmp_luasnip'     " Snippet completions
 Plug 'L3MON4D3/LuaSnip'             " Snippet engine
-Plug 'neovim/nvim-lspconfig'        " LSP configurations
-" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'chomosuke/typst-preview.nvim', {'tag': 'v1.*', 'do': ':TypstPreviewUpdate'}
+
+" LSP and language servers
+Plug 'neovim/nvim-lspconfig'             " Configures language servers
+Plug 'williamboman/mason.nvim'           " Package manager for language servers
+Plug 'williamboman/mason-lspconfig.nvim' " Bridges mason and lspconfig
 
 call plug#end()
 
@@ -280,7 +283,7 @@ EOF
 " Tinymist
 "
 lua << EOF
-require 'lspconfig' .tinymist.setup {
+require 'lspconfig'.tinymist.setup {
     offset_encoding = 'utf-8',
     settings = {
         formatterMode = 'typstyle',
@@ -315,3 +318,14 @@ require('lspconfig').texlab.setup{
 }
 EOF
 
+
+" Mason (package manager for language servers)
+"
+lua require('mason').setup()
+lua << EOF 
+require('mason-lspconfig').setup {
+  ensure_installed = {
+      'tinymist', 'texlab', 'pyright'
+    }
+}
+EOF
