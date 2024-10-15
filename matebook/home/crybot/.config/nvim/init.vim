@@ -91,7 +91,6 @@ let g:closetag_close_shortcut = '<leader>>'
 " let g:vimtex_compiler_method = 'latexmk'
 let g:latex_view_method = 'zathura'
 
-
 " REMAPPINGS
 nnoremap <C-l> gt 
 nnoremap <C-h> gT 
@@ -100,7 +99,9 @@ tnoremap <Esc> <C-\><C-n>
 tmap <C-l> <Esc>gt
 tmap <C-h> <Esc>gT
 nnoremap <C-n> :NvimTreeToggle<CR>
+
 nnoremap <silent> <leader>d :lua vim.diagnostic.open_float()<CR>
+nnoremap <silent> <leader>tc :TypstPreview<CR>
 nnoremap <silent> <leader>fs :TexlabForward<CR>
 
 " xnoremap i$ :<C-u> normal! T$vt$<CR>
