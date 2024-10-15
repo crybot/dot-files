@@ -6,7 +6,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-dispatch'
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
-Plug 'lervag/vimtex'
+" Plug 'lervag/vimtex'
 Plug 'maxmx03/solarized.nvim'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'nvim-tree/nvim-tree.lua'
@@ -25,9 +25,8 @@ Plug 'hrsh7th/cmp-cmdline'          " Command line completions
 Plug 'saadparwaiz1/cmp_luasnip'     " Snippet completions
 Plug 'L3MON4D3/LuaSnip'             " Snippet engine
 Plug 'neovim/nvim-lspconfig'        " LSP configurations
-
-" Plug 'neomake/neomake'
 " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'chomosuke/typst-preview.nvim', {'tag': 'v1.*', 'do': ':TypstPreviewUpdate'}
 
 call plug#end()
 
@@ -37,18 +36,6 @@ call plug#end()
 " let g:airline_powerline_fonts = 1
 " let g:airline_extensions = []
 " let g:airline_highlighting_cache = 1
-
-let g:deoplete#enable_at_startup = 1
-
-" Neomake
-" let g:neomake_error_sign = {'text': '✖', 'texthl': 'FoldColumn'}
-" let g:neomake_warning_sign = {'text': '➤', 'texthl': 'FoldColumn'}
-" let g:neomake_message_sign = {'text': 'M', 'texthl': 'FoldColumn'}
-" let g:neomake_info_sign = {'text': 'ℹ', 'texthl': 'FoldColumn'}
-" 
-" let g:neomake_javascript_enabled_makers = ['eslint']
-" let g:neomake_jsx_enabled_makers = ['eslint']
-
 
 " filenames like *.xml, *.html, *.xhtml, ...
 " These are the file extensions where this plugin is enabled.
@@ -97,15 +84,10 @@ let g:closetag_close_shortcut = '<leader>>'
 
 " Viewer options: One may configure the viewer either by specifying a built-in
 " viewer method:
-let g:vimtex_view_method = 'zathura'
-let g:vimtex_compiler_method = 'latexmk'
+" let g:vimtex_view_method = 'zathura'
+" let g:vimtex_compiler_method = 'latexmk'
+let g:latex_view_method = 'zathura'
 
-
-" Neomake asynchronous linting
-" Trigger neomake whenever text is changed in normal mode, leaving insert
-" mode or not pressing any key for 'updatetime' ms while in insert mode
-" autocmd TextChanged,InsertLeave,CursorHoldI *.js,*.css,*.java,*.hs,*.c,*.tex update | Neomake
-" set updatetime=1500 "wait 1.5 second of inactivity before checking for errors
 
 " REMAPPINGS
 nnoremap <C-l> gt 
@@ -115,6 +97,8 @@ tnoremap <Esc> <C-\><C-n>
 tmap <C-l> <Esc>gt
 tmap <C-h> <Esc>gT
 nnoremap <C-n> :NvimTreeToggle<CR>
+nnoremap <silent> <leader>d :lua vim.diagnostic.open_float()<CR>
+nnoremap <silent> <leader>fs :TexlabForward<CR>
 
 " xnoremap i$ :<C-u> normal! T$vt$<CR>
 " onoremap i$ :normal vi$<CR>
@@ -251,6 +235,24 @@ cmp.setup({
     { name = 'buffer' },     -- Buffer source
   })
 })
+
+-- Customize the hover window with a border, similar to completion popup
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+  border = 'rounded',
+  max_width = 80,  -- Adjust the width of the hover window if needed
+})
+
+-- Show LSP hover documentation when the cursor moves over a symbol
+vim.cmd([[
+  augroup lsp_hover
+    autocmd!
+    autocmd CursorHold,CursorHoldI * lua vim.lsp.buf.hover()
+  augroup END
+]])
+
+-- Set updatetime to make hover appear faster (1 second)
+vim.o.updatetime = 1000
+
 EOF
 
 " LSP Configuration
@@ -262,4 +264,54 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 lspconfig.pyright.setup {
   capabilities = capabilities,
 }
+lspconfig.tinymist.setup {
+  capabilities = capabilities,
+}
 EOF
+
+" Typst-preview
+"
+lua << EOF
+require 'typst-preview'.setup {
+  open_cmd = 'google-chrome --app=%s --disable-extensions --disable-background-networking --disable-background-timer-throttling',
+}
+EOF
+
+" Tinymist
+"
+lua << EOF
+require 'lspconfig' .tinymist.setup {
+    offset_encoding = 'utf-8',
+    settings = {
+        formatterMode = 'typstyle',
+        exportPdf = 'onSave',
+    }
+}
+EOF
+
+
+" TexLab
+"
+lua << EOF
+require('lspconfig').texlab.setup{
+  settings = {
+    texlab = {
+      build = {
+        executable = "latexmk",
+        args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f" },
+        forwardSearchAfter = true,
+        onSave = true,
+      },
+      forwardSearch = {
+      executable = "zathura", -- Replace with your PDF viewer
+      args = { "--synctex-forward", "%l:1:%f", "%p" },
+      },
+      chktex = {
+        onOpenAndSave = true,
+        onEdit = false,
+      },
+    },
+  },
+}
+EOF
+
