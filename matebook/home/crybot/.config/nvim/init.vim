@@ -4,7 +4,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-dispatch'
-Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 Plug 'maxmx03/solarized.nvim'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
@@ -23,16 +22,27 @@ Plug 'hrsh7th/cmp-path'             " Path completions
 Plug 'hrsh7th/cmp-cmdline'          " Command line completions
 Plug 'saadparwaiz1/cmp_luasnip'     " Snippet completions
 Plug 'L3MON4D3/LuaSnip'             " Snippet engine
+
+" Typst
 Plug 'chomosuke/typst-preview.nvim', {'tag': 'v1.*', 'do': ':TypstPreviewUpdate'}
 
 " LSP and language servers
 Plug 'neovim/nvim-lspconfig'             " Configures language servers
 Plug 'williamboman/mason.nvim'           " Package manager for language servers
 Plug 'williamboman/mason-lspconfig.nvim' " Bridges mason and lspconfig
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
-" Indentation guides
-Plug 'lukas-reineke/indent-blankline.nvim'
+" Code parsing (treesitter)
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'lukas-reineke/indent-blankline.nvim'  " Adds indentation guides
+Plug 'ThePrimeagen/refactoring.nvim'        " Refactoring utilities
+" Plug 'andymass/vim-matchup'                 " Extends % to language keywords and constructs
+" Plug 'nvim-lua/plenary.nvim'                " Required by refactoring.nvim
+
+
+" Others
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'tpope/vim-fugitive'
+" Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
@@ -81,18 +91,22 @@ let g:closetag_close_shortcut = '<leader>>'
 
 let g:latex_view_method = 'zathura'
 
-
 " REMAPPINGS
 nnoremap <C-l> gt 
 nnoremap <C-h> gT 
 nnoremap <C-p> :nohlsearch <Cr>
+" Move to the end of the line without exiting insert mode
+inoremap <C-a> <C-o>A
 tnoremap <Esc> <C-\><C-n> 
 tmap <C-l> <Esc>gt
 tmap <C-h> <Esc>gT
 nnoremap <C-n> :NvimTreeToggle<CR>
+
 nnoremap <silent> <leader>d :lua vim.diagnostic.open_float()<CR>
-nnoremap <silent> <leader>fs :TexlabForward<CR>
 nnoremap <silent> <leader>tc :TypstPreview<CR>
+nnoremap <silent> <leader>fs :TexlabForward<CR>
+
+" nnoremap <silent> 
 
 filetype plugin on
 filetype indent on
@@ -107,7 +121,8 @@ set t_Co=16
 set number
 set omnifunc=syntaxcomplete#Complete
 set cursorline
-set colorcolumn=80
+set textwidth=120
+set colorcolumn=120
 set clipboard=unnamedplus
 set encoding=UTF-8
 colorscheme catppuccin
@@ -115,7 +130,7 @@ colorscheme catppuccin
 lua require('nvim-web-devicons').setup { default = true }
 
 lua << END
--- disable netrw at the very start of your init.lua
+    -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
@@ -137,11 +152,13 @@ require("nvim-tree").setup({
     group_empty = true,
   },
   filters = {
-    dotfiles = true,
+    dotfiles = false,
   },
 })
 END
 
+" Setup lualine (status line)
+"
 lua << EOF
 require('lualine').setup {
   options = {
@@ -150,7 +167,6 @@ require('lualine').setup {
     -- component_separators = { right = '', left = '' },
     component_separators = { right = '', left = '' },
     icons_enabled = true,
-    -- disabled_filetypes = { 'NvimTree' }
   },
   sections = {
     lualine_a = {
@@ -160,15 +176,19 @@ require('lualine').setup {
     lualine_c = {
       {'filename', path = 1}, -- Shows file and folder
     },
-    lualine_x = {'diagnostics', 'encoding', 'filetype'},
+    lualine_x = {'diagnostics', 'encoding', 'fileformat', 'filetype'},
     lualine_y = {'progress'},
     lualine_z = {'location'},
   }
 }
 EOF
 
+" Beacon (for cursor highlighting)
+"
 lua require('beacon').setup()
 
+" Setup bufferline (tabs)
+"
 set mousemoveevent
 set termguicolors
 lua << EOF
@@ -193,7 +213,7 @@ lua << EOF
 EOF
 
 
-" Setup nvim-cmp
+" Setup nvim-cmp (autocompletion)
 "
 lua << EOF
 local cmp = require'cmp'
@@ -207,6 +227,7 @@ cmp.setup({
   window = {
     completion = cmp.config.window.bordered(),
     documentation = cmp.config.window.bordered(),
+    hover = cmp.config.window.bordered(),
   },
  mapping = cmp.mapping.preset.insert({
       ['<C-b>'] = cmp.mapping.scroll_docs(-4),
@@ -227,6 +248,7 @@ cmp.setup({
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
   border = 'rounded',
   max_width = 80,  -- Adjust the width of the hover window if needed
+  focusable = true,
 })
 
 -- Show LSP hover documentation when the cursor moves over a symbol
@@ -237,7 +259,7 @@ vim.cmd([[
   augroup END
 ]])
 
--- Set updatetime to make hover appear faster (1 second)
+-- Optional: Set `updatetime` to make hover appear faster (e.g., 1 second)
 vim.o.updatetime = 1000
 
 EOF
@@ -267,7 +289,7 @@ EOF
 " Tinymist
 "
 lua << EOF
-require 'lspconfig'.tinymist.setup {
+require 'lspconfig' .tinymist.setup {
     offset_encoding = 'utf-8',
     settings = {
         formatterMode = 'typstyle',
@@ -275,7 +297,6 @@ require 'lspconfig'.tinymist.setup {
     }
 }
 EOF
-
 
 " TexLab
 "
@@ -306,7 +327,7 @@ EOF
 " Mason (package manager for language servers)
 "
 lua require('mason').setup()
-lua << EOF 
+lua << EOF
 require('mason-lspconfig').setup {
   ensure_installed = {
       'tinymist', 'texlab', 'pyright'
@@ -314,9 +335,14 @@ require('mason-lspconfig').setup {
 }
 EOF
 
-" indent-blankline
+" Indent-blankline
 "
-lua require('ibl').setup()
+lua << EOF
+require('ibl').setup {
+  indent = { char = "┋" },
+  scope = { enabled = false }
+}
+EOF
 
 lua << EOF
 require('nvim-treesitter.configs').setup {
@@ -331,13 +357,32 @@ require('nvim-treesitter.configs').setup {
   auto_install = true,
 
   highlight = {
-    enable = false,
+    enable = true,
 
     -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
     -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
     -- Using this option may slow down your editor, and you may see some duplicate highlights.
     -- Instead of true it can also be a list of languages
-    additional_vim_regex_highlighting = false,
+    additional_vim_regex_highlighting = false
+  },
+  indent = {
+    enable = true,
+    disable = { "typst" }
+  },
+  matchup = {
+    enable = true,              -- mandatory, false will disable the whole extension
+    disable = { },  -- optional, list of language that will be disabled
   },
 }
+EOF
+
+" lua require('refactoring').setup()
+
+lua << EOF
+require("catppuccin").setup({
+  integrations = {
+    treesitter = true,  -- Enable or customize Catppuccin's Tree-sitter integration
+    -- other integrations
+  },
+})
 EOF
