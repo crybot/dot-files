@@ -35,13 +35,14 @@ Plug 'williamboman/mason-lspconfig.nvim' " Bridges mason and lspconfig
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'lukas-reineke/indent-blankline.nvim'  " Adds indentation guides
 Plug 'ThePrimeagen/refactoring.nvim'        " Refactoring utilities
-" Plug 'andymass/vim-matchup'                 " Extends % to language keywords and constructs
-" Plug 'nvim-lua/plenary.nvim'                " Required by refactoring.nvim
+" Plug 'andymass/vim-matchup'               " Extends % to language keywords and constructs
+" Plug 'nvim-lua/plenary.nvim'              " Required by refactoring.nvim
 
 
 " Others
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'lukas-reineke/virt-column.nvim'   " Show a character as colorcolumn
 " Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
@@ -216,7 +217,7 @@ EOF
 " Setup nvim-cmp (autocompletion)
 "
 lua << EOF
-local cmp = require'cmp'
+local cmp = require('cmp')
 
 cmp.setup({
   snippet = {
@@ -267,7 +268,7 @@ EOF
 " LSP Configuration
 "
 lua << EOF
-local lspconfig = require'lspconfig'
+local lspconfig = require('lspconfig')
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 lspconfig.pyright.setup {
@@ -281,7 +282,7 @@ EOF
 " Typst-preview
 "
 lua << EOF
-require 'typst-preview'.setup {
+require('typst-preview').setup {
   open_cmd = 'google-chrome --app=%s --disable-extensions --disable-background-networking --disable-background-timer-throttling',
 }
 EOF
@@ -289,7 +290,7 @@ EOF
 " Tinymist
 "
 lua << EOF
-require 'lspconfig' .tinymist.setup {
+require('lspconfig') .tinymist.setup {
     offset_encoding = 'utf-8',
     settings = {
         formatterMode = 'typstyle',
@@ -386,3 +387,5 @@ require("catppuccin").setup({
   },
 })
 EOF
+
+lua require("virt-column").setup()
