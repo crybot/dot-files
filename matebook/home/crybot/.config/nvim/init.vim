@@ -6,7 +6,6 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-dispatch'
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
-" Plug 'lervag/vimtex'
 Plug 'maxmx03/solarized.nvim'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'nvim-tree/nvim-tree.lua'
@@ -30,15 +29,12 @@ Plug 'chomosuke/typst-preview.nvim', {'tag': 'v1.*', 'do': ':TypstPreviewUpdate'
 Plug 'neovim/nvim-lspconfig'             " Configures language servers
 Plug 'williamboman/mason.nvim'           " Package manager for language servers
 Plug 'williamboman/mason-lspconfig.nvim' " Bridges mason and lspconfig
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+" Indentation guides
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 call plug#end()
-
-" au BufRead,BufNewFile *.tex setlocal textwidth=79
-
-" let g:airline_theme = 'catppuccin'
-" let g:airline_powerline_fonts = 1
-" let g:airline_extensions = []
-" let g:airline_highlighting_cache = 1
 
 " filenames like *.xml, *.html, *.xhtml, ...
 " These are the file extensions where this plugin is enabled.
@@ -83,13 +79,8 @@ let g:closetag_shortcut = '>'
 "
 let g:closetag_close_shortcut = '<leader>>'
 
-" VIMTEX SETTINGS
-
-" Viewer options: One may configure the viewer either by specifying a built-in
-" viewer method:
-" let g:vimtex_view_method = 'zathura'
-" let g:vimtex_compiler_method = 'latexmk'
 let g:latex_view_method = 'zathura'
+
 
 " REMAPPINGS
 nnoremap <C-l> gt 
@@ -99,16 +90,9 @@ tnoremap <Esc> <C-\><C-n>
 tmap <C-l> <Esc>gt
 tmap <C-h> <Esc>gT
 nnoremap <C-n> :NvimTreeToggle<CR>
-
 nnoremap <silent> <leader>d :lua vim.diagnostic.open_float()<CR>
-nnoremap <silent> <leader>tc :TypstPreview<CR>
 nnoremap <silent> <leader>fs :TexlabForward<CR>
-
-" xnoremap i$ :<C-u> normal! T$vt$<CR>
-" onoremap i$ :normal vi$<CR>
-" xnoremap a$ :<C-u> normal!F$vf$<CR>
-" onoremap a$ :normal va$<CR>
-
+nnoremap <silent> <leader>tc :TypstPreview<CR>
 
 filetype plugin on
 filetype indent on
@@ -128,11 +112,10 @@ set clipboard=unnamedplus
 set encoding=UTF-8
 colorscheme catppuccin
 
-
 lua require('nvim-web-devicons').setup { default = true }
 
 lua << END
-    -- disable netrw at the very start of your init.lua
+-- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
@@ -328,5 +311,33 @@ require('mason-lspconfig').setup {
   ensure_installed = {
       'tinymist', 'texlab', 'pyright'
     }
+}
+EOF
+
+" indent-blankline
+"
+lua require('ibl').setup()
+
+lua << EOF
+require('nvim-treesitter.configs').setup {
+  -- A list of parser names, or "all" (the listed parsers MUST always be installed)
+  ensure_installed = { "python", "typst" },
+
+  -- Install parsers synchronously (only applied to `ensure_installed`)
+  sync_install = false,
+
+  -- Automatically install missing parsers when entering buffer
+  -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
+  auto_install = true,
+
+  highlight = {
+    enable = false,
+
+    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+    -- Using this option may slow down your editor, and you may see some duplicate highlights.
+    -- Instead of true it can also be a list of languages
+    additional_vim_regex_highlighting = false,
+  },
 }
 EOF
