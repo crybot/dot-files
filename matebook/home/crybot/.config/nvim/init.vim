@@ -27,7 +27,7 @@ Plug 'L3MON4D3/LuaSnip'             " Snippet engine
 Plug 'chomosuke/typst-preview.nvim', {'tag': 'v1.*', 'do': ':TypstPreviewUpdate'}
 
 " LSP and language servers
-Plug 'neovim/nvim-lspconfig'             " Configures language servers
+Plug 'neovim/nvim-lspconfig', {'tag': 'v1.0.0'}             " Configures language servers
 Plug 'williamboman/mason.nvim'           " Package manager for language servers
 Plug 'williamboman/mason-lspconfig.nvim' " Bridges mason and lspconfig
 
@@ -277,6 +277,7 @@ lspconfig.pyright.setup {
 lspconfig.tinymist.setup {
   capabilities = capabilities,
 }
+
 EOF
 
 " Typst-preview
@@ -295,7 +296,10 @@ require('lspconfig') .tinymist.setup {
     settings = {
         formatterMode = 'typstyle',
         exportPdf = 'onSave',
-    }
+    },
+    root_dir = function(fname)
+      return vim.fn.getcwd()
+    end,
 }
 EOF
 
@@ -331,8 +335,8 @@ lua require('mason').setup()
 lua << EOF
 require('mason-lspconfig').setup {
   ensure_installed = {
-      'tinymist', 'texlab', 'pyright'
-    }
+    'tinymist', 'texlab', 'pyright'
+  }
 }
 EOF
 
@@ -348,7 +352,7 @@ EOF
 lua << EOF
 require('nvim-treesitter.configs').setup {
   -- A list of parser names, or "all" (the listed parsers MUST always be installed)
-  ensure_installed = { "python", "typst" },
+  ensure_installed = { "python", "typst", "vim", "lua" },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
