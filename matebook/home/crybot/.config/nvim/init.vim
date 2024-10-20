@@ -35,14 +35,15 @@ Plug 'williamboman/mason-lspconfig.nvim' " Bridges mason and lspconfig
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'lukas-reineke/indent-blankline.nvim'  " Adds indentation guides
 Plug 'ThePrimeagen/refactoring.nvim'        " Refactoring utilities
-" Plug 'andymass/vim-matchup'               " Extends % to language keywords and constructs
-" Plug 'nvim-lua/plenary.nvim'              " Required by refactoring.nvim
+Plug 'andymass/vim-matchup'                 " Extends % to language keywords and constructs
+Plug 'nvim-lua/plenary.nvim'                " Required by refactoring.nvim
 
 
 " Others
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'lukas-reineke/virt-column.nvim'   " Show a character as colorcolumn
+Plug 'folke/todo-comments.nvim'         " Highlight and search TODO comments
 " Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
@@ -393,3 +394,5 @@ require("catppuccin").setup({
 EOF
 
 lua require("virt-column").setup()
+
+lua require("todo-comments").setup()
