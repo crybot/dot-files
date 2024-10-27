@@ -10,15 +10,16 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 # Restore GNOME's settings
-exec --no-startup-id /usr/libexec/gnome-settings-daemon-localeexec
+# exec --no-startup-id /usr/libexec/gnome-settings-daemon-localeexec
 # Fix a bug in gnome-settings-daemon: http://feeding.cloud.geek.nz/posts/creating-a-modern-tiling-desktop-environment-using-i3/
-exec --no-startup-id dconf write /org/gnome/settings-daemon/plugins/cursor/active false
+# exec --no-startup-id dconf write /org/gnome/settings-daemon/plugins/cursor/active false
 
 # Set display dpi
-exec --no-startup-id xrandr --dpi 259
+# exec --no-startup-id xrandr --dpi 259
 
 # Start compton for window transparency. -CG disables all shadow effects
-exec --no-startup-id compton -CGb --config ~/.config/compton/compton.conf
+# -b (Daemon) disabled because it caused issues with the graphics driver
+exec --no-startup-id compton -CG --config ~/.config/compton/compton.conf &
 
 # Set Background Wallpaper
 # exec --no-startup-id feh --bg-scale ~/Pictures/backgrounds/disco-dingo-art.png &
@@ -32,7 +33,7 @@ exec --no-startup-id nm-applet &
 exec --no-startup-id redshift-gtk &
 
 # Load Xresources config
-exec --no-startup-id xrdb -merge ~/.Xresources
+# exec --no-startup-id xrdb -merge ~/.Xresources
 
 # Do not follow mouse
 focus_follows_mouse no
@@ -74,7 +75,7 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl -- set-sink-volume $defa
 #decrease sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume $default-sink -5% && notify-send "Volume: $volume"
 # mute sound
-bindsym xf86AudioMute exec --no-startup-id pactl set-sink-mute $default-sink toggle 
+# bindsym xf86AudioMute exec --no-startup-id pactl set-sink-mute $default-sink toggle 
 
 # Media Play/Pause
 bindsym XF86AudioPlay exec playerctl play-pause
@@ -113,10 +114,10 @@ bindsym $mod+p exec --no-startup-id dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -125,10 +126,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -137,7 +138,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+o split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -244,6 +245,7 @@ bindsym $mod+r mode "resize"
 
 for_window [class="Hexchat"] resize set 2500 1500
 for_window [class="hexchat"] resize set 2500 1500
+focus_on_window_activation none
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -268,3 +270,5 @@ client.urgent           #77216F #77216F #FFFFFF #EFB73E
 
 hide_edge_borders smart
 default_border pixel 1
+
+
